@@ -1,16 +1,10 @@
+"use strict";
 
-
-/* =========================================
-   PAWSTUDIO PRODUCT DATA
-   9 PRODUCTS
-========================================= */
+/* =========================================================
+   PAWSTUDIO PRODUCTS
+========================================================= */
 
 const pawProducts = [
-
-  /* =========================================
-     PET BEDS
-  ========================================== */
-
   {
     id: 1,
     name: "Cozy Haven Bed",
@@ -22,7 +16,7 @@ const pawProducts = [
     rating: 4.8,
     image: "images/cozy.jpeg",
     description:
-      "A soft and cozy resting space designed for smaller companions."
+      "A soft and cozy resting space designed for smaller companions.",
   },
 
   {
@@ -36,7 +30,7 @@ const pawProducts = [
     rating: 4.9,
     image: "images/cloud-rest.jpeg",
     description:
-      "A supportive everyday bed made for comfortable medium-sized pets."
+      "A supportive everyday bed made for comfortable medium-sized pets.",
   },
 
   {
@@ -50,13 +44,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/grand.jpeg",
     description:
-      "A spacious and supportive resting space for larger companions."
+      "A spacious and supportive resting space for larger companions.",
   },
-
-
-  /* =========================================
-     PET FURNITURE
-  ========================================== */
 
   {
     id: 4,
@@ -69,7 +58,7 @@ const pawProducts = [
     rating: 4.9,
     image: "images/lounge.jpeg",
     description:
-      "A relaxed lounging space designed to fit naturally into your home."
+      "A relaxed lounging space designed to fit naturally into your home.",
   },
 
   {
@@ -83,7 +72,7 @@ const pawProducts = [
     rating: 4.7,
     image: "images/quiet.jpeg",
     description:
-      "A cozy private retreat for cats who love calm and quiet spaces."
+      "A cozy private retreat for cats who love calm and quiet spaces.",
   },
 
   {
@@ -97,13 +86,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/window.jpeg",
     description:
-      "A comfortable elevated spot for relaxing and watching the world."
+      "A comfortable elevated spot for relaxing and watching the world.",
   },
-
-
-  /* =========================================
-     ACCESSORIES
-  ========================================== */
 
   {
     id: 7,
@@ -116,7 +100,7 @@ const pawProducts = [
     rating: 4.7,
     image: "images/bowl.jpeg",
     description:
-      "A simple elevated feeding solution designed for everyday routines."
+      "A simple elevated feeding solution designed for everyday routines.",
   },
 
   {
@@ -130,7 +114,7 @@ const pawProducts = [
     rating: 4.6,
     image: "images/toy-storage.jpeg",
     description:
-      "A practical way to keep their favorite toys neatly organized."
+      "A practical way to keep their favorite toys neatly organized.",
   },
 
   {
@@ -144,48 +128,25 @@ const pawProducts = [
     rating: 4.8,
     image: "images/mat.jpeg",
     description:
-      "A versatile everyday mat for resting, feeding, and relaxing."
-  }
-
+      "A versatile everyday mat for resting, feeding, and relaxing.",
+  },
 ];
 
 
-/* =========================================
-   ACTIVE FILTERS
-========================================= */
+/* =========================================================
+   FILTER STATE
+========================================================= */
 
 let activeCategory = "all";
 let activeSize = "all";
 
 
-/* =========================================
-   DOM ELEMENTS
-========================================= */
-
-const productsGrid =
-  document.getElementById("paw-products-grid");
-
-const productsCount =
-  document.getElementById("paw-products-count");
-
-const productsEmpty =
-  document.getElementById("paw-products-empty");
-
-const clearButton =
-  document.getElementById("paw-products-clear");
-
-const resetButton =
-  document.getElementById("paw-products-reset");
-
-
-/* =========================================
-   FILTER PRODUCTS
-========================================= */
+/* =========================================================
+   GET FILTERED PRODUCTS
+========================================================= */
 
 function getFilteredProducts() {
-
   return pawProducts.filter((product) => {
-
     const categoryMatches =
       activeCategory === "all" ||
       product.category === activeCategory;
@@ -195,285 +156,396 @@ function getFilteredProducts() {
       product.size === activeSize;
 
     return categoryMatches && sizeMatches;
-
   });
-
 }
 
 
-/* =========================================
+/* =========================================================
+   FORMAT PRICE
+========================================================= */
+
+function formatPawPrice(price) {
+  return `₹${price.toLocaleString("en-IN")}`;
+}
+
+
+/* =========================================================
    CREATE PRODUCT CARD
-========================================= */
+========================================================= */
 
 function createProductCard(product) {
 
-  const card =
-    document.createElement("article");
+  /*
+    IMPORTANT:
+    The View Product button now redirects to contact.html
+    and also sends the selected product name through the URL.
 
-  card.className =
-    "paw-product-card";
+    Example:
+    contact.html?product=Cozy%20Haven%20Bed
+  */
 
-  card.innerHTML = `
+  const contactUrl =
+    `contact.html?product=${encodeURIComponent(product.name)}`;
 
-    <div class="paw-product-image-wrap">
+  return `
+    <article class="paw-product-card">
 
-      <img
-        class="paw-product-image"
-        src="${product.image}"
-        alt="${product.name}"
-        loading="lazy"
-      >
+      <div class="paw-product-image-wrap">
 
-    </div>
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          class="paw-product-image"
+          loading="lazy"
+        />
 
-
-    <div class="paw-product-content">
-
-      <span class="paw-product-category">
-        ${product.categoryLabel}
-      </span>
-
-
-      <h3 class="paw-product-name">
-        ${product.name}
-      </h3>
-
-
-      <p class="paw-product-description">
-        ${product.description}
-      </p>
-
-
-      <div class="paw-product-meta">
-
-        <span class="paw-product-rating">
-
-          <i data-lucide="star"></i>
-
-          ${product.rating}
-
-        </span>
-
-
-        <span class="paw-product-price">
-          ₹${product.price.toLocaleString("en-IN")}
+        <span class="paw-product-category">
+          ${product.categoryLabel}
         </span>
 
       </div>
 
 
-      <a
-        href="#"
-        class="paw-product-link"
-        data-product-id="${product.id}"
-      >
+      <div class="paw-product-content">
 
-        View Product
+        <div class="paw-product-meta">
 
-        <i data-lucide="arrow-up-right"></i>
+          <span class="paw-product-size">
+            ${product.sizeLabel}
+          </span>
 
-      </a>
+          <span class="paw-product-rating">
+            <i data-lucide="star"></i>
+            ${product.rating}
+          </span>
 
-    </div>
+        </div>
 
+
+        <h3 class="paw-product-name">
+          ${product.name}
+        </h3>
+
+
+        <p class="paw-product-description">
+          ${product.description}
+        </p>
+
+
+        <div class="paw-product-bottom">
+
+          <span class="paw-product-price">
+            ${formatPawPrice(product.price)}
+          </span>
+
+        </div>
+
+
+        <!-- =========================================
+             VIEW PRODUCT
+             REDIRECTS TO CONTACT PAGE
+        ========================================== -->
+
+        <a
+          href="${contactUrl}"
+          class="paw-product-link"
+          data-product-id="${product.id}"
+          aria-label="Contact PawStudio about ${product.name}"
+        >
+          View Product
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
+    </article>
   `;
-
-  return card;
-
 }
 
 
-/* =========================================
+/* =========================================================
    RENDER PRODUCTS
-========================================= */
+========================================================= */
 
-function renderProducts() {
+function renderPawProducts() {
 
-  const filteredProducts =
-    getFilteredProducts();
+  const grid = document.getElementById("paw-products-grid");
+  const emptyState = document.getElementById("paw-products-empty");
+  const count = document.getElementById("paw-products-count");
+
+  if (!grid) return;
+
+  const filteredProducts = getFilteredProducts();
+
+  /*
+    Clear existing products
+  */
+  grid.innerHTML = "";
 
 
-  /* Clear grid */
-
-  productsGrid.innerHTML = "";
-
-
-  /* Update count */
-
-  productsCount.textContent =
-    filteredProducts.length;
-
-
-  /* Empty state */
-
+  /*
+    Empty state
+  */
   if (filteredProducts.length === 0) {
 
-    productsEmpty.hidden = false;
+    grid.hidden = true;
+
+    if (emptyState) {
+      emptyState.hidden = false;
+    }
+
+    if (count) {
+      count.textContent = "0";
+    }
+
+    refreshPawIcons();
 
     return;
-
   }
 
 
-  productsEmpty.hidden = true;
+  /*
+    Show product grid
+  */
+  grid.hidden = false;
+
+  if (emptyState) {
+    emptyState.hidden = true;
+  }
 
 
-  /* Add cards */
-
-  filteredProducts.forEach((product) => {
-
-    const card =
-      createProductCard(product);
-
-    productsGrid.appendChild(card);
-
-  });
+  /*
+    Render cards
+  */
+  grid.innerHTML = filteredProducts
+    .map(createProductCard)
+    .join("");
 
 
-  /* Refresh Lucide */
+  /*
+    Update count
+  */
+  if (count) {
+    count.textContent = filteredProducts.length;
+  }
 
-  lucide.createIcons();
 
+  /*
+    Refresh Lucide icons
+  */
+  refreshPawIcons();
 }
 
 
-/* =========================================
-   CATEGORY BUTTONS
-========================================= */
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
 
-const categoryButtons =
-  document.querySelectorAll(
+function initializeCategoryFilters() {
+
+  const categoryButtons = document.querySelectorAll(
     ".paw-products-filter-button"
   );
 
+  categoryButtons.forEach((button) => {
 
-categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
 
-  button.addEventListener("click", () => {
-
-    activeCategory =
-      button.dataset.category;
+      activeCategory =
+        button.getAttribute("data-category") || "all";
 
 
-    /* Update active state */
+      /*
+        Remove active state
+      */
+      categoryButtons.forEach((item) => {
+        item.classList.remove("is-active");
+      });
 
-    categoryButtons.forEach((item) => {
 
-      item.classList.remove("is-active");
+      /*
+        Add active state
+      */
+      button.classList.add("is-active");
 
+
+      /*
+        Render filtered products
+      */
+      renderPawProducts();
     });
-
-
-    button.classList.add("is-active");
-
-
-    /* Render */
-
-    renderProducts();
-
   });
+}
 
-});
 
+/* =========================================================
+   SIZE FILTER
+========================================================= */
 
-/* =========================================
-   SIZE BUTTONS
-========================================= */
+function initializeSizeFilters() {
 
-const sizeButtons =
-  document.querySelectorAll(
+  const sizeButtons = document.querySelectorAll(
     ".paw-products-size-button"
   );
 
+  sizeButtons.forEach((button) => {
 
-sizeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
 
-  button.addEventListener("click", () => {
-
-    activeSize =
-      button.dataset.size;
+      activeSize =
+        button.getAttribute("data-size") || "all";
 
 
-    /* Update active state */
+      /*
+        Remove active state
+      */
+      sizeButtons.forEach((item) => {
+        item.classList.remove("is-active");
+      });
 
-    sizeButtons.forEach((item) => {
 
-      item.classList.remove("is-active");
+      /*
+        Add active state
+      */
+      button.classList.add("is-active");
 
+
+      /*
+        Render filtered products
+      */
+      renderPawProducts();
     });
-
-
-    button.classList.add("is-active");
-
-
-    /* Render */
-
-    renderProducts();
-
   });
+}
 
-});
 
-
-/* =========================================
+/* =========================================================
    RESET FILTERS
-========================================= */
+========================================================= */
 
-function resetProductFilters() {
+function resetPawProductFilters() {
 
   activeCategory = "all";
   activeSize = "all";
 
 
-  /* Reset category */
+  /*
+    Reset category buttons
+  */
 
-  categoryButtons.forEach((button) => {
+  document
+    .querySelectorAll(".paw-products-filter-button")
+    .forEach((button) => {
 
-    button.classList.toggle(
-      "is-active",
-      button.dataset.category === "all"
+      button.classList.toggle(
+        "is-active",
+        button.getAttribute("data-category") === "all"
+      );
+
+    });
+
+
+  /*
+    Reset size buttons
+  */
+
+  document
+    .querySelectorAll(".paw-products-size-button")
+    .forEach((button) => {
+
+      button.classList.toggle(
+        "is-active",
+        button.getAttribute("data-size") === "all"
+      );
+
+    });
+
+
+  /*
+    Render all products
+  */
+
+  renderPawProducts();
+}
+
+
+/* =========================================================
+   RESET BUTTONS
+========================================================= */
+
+function initializeProductResetButtons() {
+
+  const clearButton =
+    document.getElementById("paw-products-clear");
+
+  const resetButton =
+    document.getElementById("paw-products-reset");
+
+
+  if (clearButton) {
+
+    clearButton.addEventListener(
+      "click",
+      resetPawProductFilters
     );
 
-  });
+  }
 
 
-  /* Reset size */
+  if (resetButton) {
 
-  sizeButtons.forEach((button) => {
-
-    button.classList.toggle(
-      "is-active",
-      button.dataset.size === "all"
+    resetButton.addEventListener(
+      "click",
+      resetPawProductFilters
     );
 
-  });
+  }
+}
 
 
-  /* Render */
+/* =========================================================
+   LUCIDE ICONS
+========================================================= */
 
-  renderProducts();
+function refreshPawIcons() {
+
+  if (typeof lucide !== "undefined") {
+
+    lucide.createIcons();
+
+  }
 
 }
 
 
-/* =========================================
-   RESET BUTTONS
-========================================= */
+/* =========================================================
+   INITIALIZE PRODUCTS PAGE
+========================================================= */
 
-clearButton.addEventListener(
-  "click",
-  resetProductFilters
-);
+document.addEventListener("DOMContentLoaded", () => {
 
-resetButton.addEventListener(
-  "click",
-  resetProductFilters
-);
+  /*
+    Initialize filters
+  */
+
+  initializeCategoryFilters();
+
+  initializeSizeFilters();
+
+  initializeProductResetButtons();
 
 
-/* =========================================
-   INITIAL RENDER
-========================================= */
+  /*
+    Render products
+  */
 
-renderProducts();
+  renderPawProducts();
 
+
+  /*
+    Initialize icons
+  */
+
+  refreshPawIcons();
+
+});
