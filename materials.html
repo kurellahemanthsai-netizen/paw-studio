@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" />
+    <title>Materials</title>
+    <!-- =========================================
+       GOOGLE FONT
+       ========================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================
+       LUCIDE ICONS
+       ========================================= -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="materials.css" />
+</head>
+<body>
+      <!-- =========================================================
+     PAWSTUDIO
+     HEADER
+     ========================================================= -->
+
+    <header class="site-header">
+      <div class="header-container">
+        <!-- =====================================================
+         LOGO
+         ===================================================== -->
+
+        <div class="logo">
+          <a href="index.html" aria-label="PawStudio Home">
+            <img src="images/logo.png" alt="PawStudio Logo" />
+          </a>
+
+          <div class="logo-text" onclick="window.location.href = 'index.html'">
+            <h1>
+              <span class="paw">Paw</span><span class="studio">Studio</span>
+            </h1>
+
+            <p>Custom Pet Furniture & Accessories</p>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+        <nav class="navbar" id="mainNavbar" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <!-- =================================================
+             HOME
+             ================================================= -->
+
+            <li class="dropdown">
+              <a href="index.html">
+                <span>Home</span>
+
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </a>
+
+              <!-- HOME DROPDOWN -->
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="index.html">
+                    <i data-lucide="house" aria-hidden="true"></i>
+
+                    <span>Classic Home</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="home2.html">
+                    <i data-lucide="sparkles" aria-hidden="true"></i>
+
+                    <span>Modern Home</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- =================================================
+             ABOUT
+             ================================================= -->
+
+            <li>
+              <a href="about.html">
+                <span>About</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             PRODUCTS
+             ================================================= -->
+
+            <li class="dropdown">
+              <a href="products.html">
+                <span>Products</span>
+
+              </a>
+            </li>
+            <!-- =================================================
+             MATERIALS
+             ================================================= -->
+
+            <li>
+              <a href="materials.html" class="active">
+                <span>Materials</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             CUSTOM ORDERS
+             ================================================= -->
+
+            <li>
+              <a href="customize.html">
+                <span>Customize</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             CONTACT
+             ================================================= -->
+
+            <li>
+              <a href="contact.html">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- MOBILE CTA -->
+
+          <div class="mobile-book">
+            <a href="form.html" class="book-btn">
+              <span>Customize Yours</span>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- =====================================================
+         HEADER ACTIONS
+         ===================================================== -->
+
+        <div class="header-buttons">
+          <!-- RTL -->
+
+          <button
+            class="icon-btn"
+            id="pawstudioRtlToggle"
+            type="button"
+            title="RTL Mode"
+            aria-label="Toggle RTL mode"
+            aria-pressed="false"
+          >
+            <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- DARK MODE -->
+
+          <button
+            class="icon-btn"
+            id="pawstudioThemeToggle"
+            type="button"
+            title="Dark Mode"
+            aria-label="Toggle dark mode"
+          >
+            <i data-lucide="moon" aria-hidden="true"></i>
+          </button>
+
+          <!-- DESKTOP CTA -->
+
+          <a href="form.html" class="book-btn desktop-book">
+            <span>Customize Yours</span>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+
+          <!-- MOBILE MENU -->
+
+          <button
+            class="icon-btn menu-btn"
+            id="pawstudioMenuToggle"
+            type="button"
+            title="Menu"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="paw-materials-hero">
+
+  <div class="paw-materials-hero-overlay"></div>
+
+  <div class="paw-materials-hero-container">
+
+    <div class="paw-materials-hero-content">
+
+      <div class="section-badge">
+        <span class="section-badge-dot"></span>
+        MATERIALS & CRAFT
+      </div>
+
+      <h1 class="paw-materials-hero-title">
+        Materials
+        <span>Made to Matter.</span>
+      </h1>
+
+      <p class="paw-materials-hero-description">
+        Thoughtfully selected materials that bring together natural beauty,
+        lasting quality, and everyday comfort for your pet and your home.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="paw-materials-philosophy">
+
+  <div class="paw-materials-philosophy-container">
+
+    <div class="paw-materials-philosophy-image-wrap">
+      <img
+        src="images/phylosiphy.jpeg"
+        alt="Natural materials used in handcrafted pet furniture"
+        class="paw-materials-philosophy-image"
+      />
+    </div>
+
+    <div class="paw-materials-philosophy-content">
+
+      <div class="section-badge">
+        <span class="section-badge-dot"></span>
+        OUR MATERIAL PHILOSOPHY
+      </div>
+
+      <h2 class="paw-materials-philosophy-title">
+        Materials,
+        <span>Chosen With Care.</span>
+      </h2>
+
+      <p class="paw-materials-philosophy-intro">
+        Every material we use is selected with your pet, your home,
+        and everyday living in mind.
+      </p>
+
+      <div class="paw-materials-philosophy-points">
+
+        <div class="paw-materials-philosophy-point">
+          <span>01</span>
+          <div>
+            <h3>Natural Wood</h3>
+            <p>
+              Warm, durable, and timeless materials that bring
+              natural character to every piece.
+            </p>
+          </div>
+        </div>
+
+        <div class="paw-materials-philosophy-point">
+          <span>02</span>
+          <div>
+            <h3>Soft Textures</h3>
+            <p>
+              Comfortable fabrics and surfaces made for everyday
+              resting, relaxing, and lounging.
+            </p>
+          </div>
+        </div>
+
+        <div class="paw-materials-philosophy-point">
+          <span>03</span>
+          <div>
+            <h3>Thoughtful Finishes</h3>
+            <p>
+              Refined finishes that enhance the material while
+              keeping each piece beautiful and practical.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="paw-materials-featured">
+
+  <div class="paw-materials-featured-container">
+
+    <div class="paw-materials-featured-heading">
+
+      <div class="section-badge">
+        <span class="section-badge-dot"></span>
+        FEATURED MATERIALS
+      </div>
+
+      <h2 class="paw-materials-featured-title">
+        Materials That
+        <span>Bring Pieces to Life.</span>
+      </h2>
+
+      <p class="paw-materials-featured-intro">
+        From natural wood to soft textures and considered finishes,
+        every material contributes to the comfort and character of
+        each PawStudio piece.
+      </p>
+
+    </div>
+
+
+    <div class="paw-materials-featured-grid">
+
+      <!-- CARD 01 -->
+      <article class="paw-material-card">
+
+        <div class="paw-material-card-image">
+          <img
+            src="images/naturalwood.jpeg"
+            alt="Natural wood used in handcrafted pet furniture"
+          />
+        </div>
+
+        <div class="paw-material-card-content">
+
+          <span class="paw-material-card-number">
+            01
+          </span>
+
+          <h3>
+            Natural Wood
+          </h3>
+
+          <p>
+            Warm, durable, and naturally beautiful, bringing
+            timeless character to every handcrafted piece.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 02 -->
+      <article class="paw-material-card">
+
+        <div class="paw-material-card-image">
+          <img
+            src="images/softfabric.jpeg"
+            alt="Soft fabric used in pet furniture"
+          />
+        </div>
+
+        <div class="paw-material-card-content">
+
+          <span class="paw-material-card-number">
+            02
+          </span>
+
+          <h3>
+            Soft Textures
+          </h3>
+
+          <p>
+            Comfortable fabrics and tactile surfaces selected
+            for everyday resting, lounging, and relaxation.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARD 03 -->
+      <article class="paw-material-card">
+
+        <div class="paw-material-card-image">
+          <img
+            src="images/refined.jpeg"
+            alt="Refined finish on handcrafted pet furniture"
+          />
+        </div>
+
+        <div class="paw-material-card-content">
+
+          <span class="paw-material-card-number">
+            03
+          </span>
+
+          <h3>
+            Thoughtful Finishes
+          </h3>
+
+          <p>
+            Refined finishes that highlight the natural character
+            of each material while keeping every piece practical.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="paw-materials-qualities">
+
+  <!-- SECTION HEADING -->
+  <div class="paw-materials-qualities-heading">
+
+    <div class="section-badge">
+      <span class="section-badge-dot"></span>
+      MATERIAL QUALITIES
+    </div>
+
+    <h2 class="paw-materials-qualities-title">
+      Made for
+      <span>More Than Just Looks.</span>
+    </h2>
+
+    <p class="paw-materials-qualities-intro">
+      The materials we choose are considered for the way they perform,
+      feel, and become part of everyday life. From durability and
+      practicality to the character they develop over time, every choice
+      is made to create a balance between beautiful design, lasting
+      comfort, and the realities of living with pets.
+    </p>
+
+  </div>
+
+
+  <div class="paw-materials-qualities-container">
+
+    <!-- ROW 01 -->
+    <div class="paw-materials-qualities-row">
+
+      <div class="paw-materials-qualities-image">
+        <img
+          src="images/everyday.png"
+          alt="Handcrafted pet furniture designed for everyday use"
+        />
+      </div>
+
+      <div class="paw-materials-qualities-content">
+
+        <span class="paw-materials-qualities-number">01</span>
+
+        <h2>
+          Built for
+          <span>Everyday Life.</span>
+        </h2>
+
+        <p>
+          Pet furniture becomes part of everyday life, which is why each
+          material is considered for more than just its appearance. We look
+          for qualities that can comfortably handle regular use, movement,
+          resting, climbing, and all the little moments that naturally happen
+          throughout the day. The result is a piece that feels dependable
+          without losing the warmth and character that make it special.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ROW 02 -->
+    <div class="paw-materials-qualities-row reverse">
+
+      <div class="paw-materials-qualities-image">
+        <img
+          src="images/beautiful.png"
+          alt="Easy to maintain handcrafted pet furniture"
+        />
+      </div>
+
+      <div class="paw-materials-qualities-content">
+
+        <span class="paw-materials-qualities-number">02</span>
+
+        <h2>
+          Easy to
+          <span>Live With.</span>
+        </h2>
+
+        <p>
+          Beautiful furniture should also fit naturally into the rhythm of
+          your home. Our material choices are made with everyday practicality
+          in mind, helping each piece remain comfortable, approachable, and
+          easy to care for over time. From daily routines to unexpected little
+          messes, every detail is considered so that your pet can enjoy their
+          space while you can enjoy having it as part of your home.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ROW 03 -->
+    <div class="paw-materials-qualities-row">
+
+      <div class="paw-materials-qualities-image">
+        <img
+          src="images/age.png"
+          alt="Timeless handcrafted pet furniture aging beautifully"
+        />
+      </div>
+
+      <div class="paw-materials-qualities-content">
+
+        <span class="paw-materials-qualities-number">03</span>
+
+        <h2>
+          Made to Age
+          <span>Beautifully.</span>
+        </h2>
+
+        <p>
+          We believe thoughtfully made furniture should become more meaningful
+          with time rather than simply look new for a short while. Materials
+          are selected for their ability to retain their character while
+          naturally becoming part of the environment around them. Subtle
+          changes, everyday use, and the passing of time can add personality
+          to each piece, making it feel increasingly connected to your pet
+          and your home.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="paw-materials-process">
+
+  <!-- SECTION HEADING -->
+  <div class="paw-materials-process-heading">
+
+    <div class="section-badge">
+      <span class="section-badge-dot"></span>
+      FROM MATERIAL TO FINISHED PIECE
+    </div>
+
+    <h2 class="paw-materials-process-title">
+      From Raw Material
+      <span>To Something They Love.</span>
+    </h2>
+
+    <p class="paw-materials-process-intro">
+      Every PawStudio piece begins with carefully selected materials and
+      takes shape through a thoughtful process of shaping, refining, and
+      finishing. What starts as individual materials gradually becomes a
+      comfortable, functional piece designed to belong naturally in your
+      pet's everyday world and your home.
+    </p>
+
+  </div>
+
+
+  <!-- BEFORE / AFTER -->
+  <div class="paw-materials-process-container">
+
+    <!-- BEFORE -->
+    <div class="paw-materials-process-item">
+
+      <div class="paw-materials-process-image">
+        <img
+          src="images/before.png"
+          alt="Materials before being crafted into a finished pet furniture piece"
+        />
+      </div>
+
+      <div class="paw-materials-process-label">
+
+        <span class="paw-materials-process-number">01</span>
+
+        <div>
+          <h3>Before</h3>
+          <p>
+            Selected materials, ready to be shaped and transformed.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CENTER TRANSITION -->
+    <div class="paw-materials-process-transition">
+
+      <span class="paw-materials-process-line"></span>
+
+    
+
+      <!-- <span class="paw-materials-process-line"></span> -->
+
+    </div>
+
+
+    <!-- AFTER -->
+    <div class="paw-materials-process-item">
+
+      <div class="paw-materials-process-image">
+        <img
+          src="images/after.png"
+          alt="Finished handcrafted PawStudio pet furniture piece"
+        />
+      </div>
+
+      <div class="paw-materials-process-label">
+
+        <span class="paw-materials-process-number">02</span>
+
+        <div>
+          <h3>After</h3>
+          <p>
+            A finished piece made for comfort, character, and everyday life.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+ 
+
+</section>
+
+<section class="paw-materials-cta">
+
+  <div class="paw-materials-cta-box">
+
+    <div class="paw-materials-cta-label">
+      <span></span>
+      CREATE WITH PAWSTUDIO
+    </div>
+
+    <h2 class="paw-materials-cta-title">
+      Thoughtful Materials.
+      <span>Made for Them.</span>
+    </h2>
+
+    <p class="paw-materials-cta-text">
+      Let's create a piece that brings together lasting materials,
+      thoughtful craftsmanship, and a place your pet will love.
+    </p>
+
+    <a href="#" class="paw-materials-cta-btn">
+      Start Your Project
+      <span>↗</span>
+    </a>
+
+  </div>
+
+</section>
+    <!-- =========================================================
+     PAWSTUDIO
+     FOOTER
+     ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- =====================================================
+         BRAND
+         ===================================================== -->
+
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <a href="index.html" aria-label="PawStudio Home">
+              <img src="images/logo.png" alt="PawStudio Logo" />
+            </a>
+
+            <div class="footer-branding">
+              <h2>
+                <span class="paw">Paw</span><span class="studio">Studio</span>
+              </h2>
+
+              <p>Custom Pet Furniture & Accessories</p>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            Thoughtfully crafted furniture and accessories designed around your
+            pet's comfort, personality, and everyday life.
+          </p>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social-media">
+            <!-- INSTAGRAM -->
+
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <i data-lucide="camera" aria-hidden="true"></i>
+            </a>
+
+            <!-- FACEBOOK -->
+
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <i data-lucide="users" aria-hidden="true"></i>
+            </a>
+
+            <!-- YOUTUBE -->
+
+            <a href="#" aria-label="YouTube" title="YouTube">
+              <i data-lucide="play" aria-hidden="true"></i>
+            </a>
+
+            <!-- EMAIL -->
+
+            <a href="mailto:info@aquacare.com" aria-label="Email" title="Email">
+              <i data-lucide="mail" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         QUICK LINKS
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="products.html">Products</a>
+            </li>
+            
+            <li>
+              <a href="materials.html">Materials</a>
+            </li>
+
+            <li>
+              <a href="customize.html">Customize</a>
+            </li>
+
+
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         EXPLORE
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+
+          <ul>
+            <li>
+              <a href="products.html#pet-beds"> Pet Beds </a>
+            </li>
+
+            <li>
+              <a href="products.html#furniture"> Pet Furniture </a>
+            </li>
+
+            <li>
+              <a href="products.html#accessories"> Accessories </a>
+            </li>
+
+            <li>
+              <a href="products.html#small"> Small Pets </a>
+            </li>
+
+            <li>
+              <a href="products.html#medium"> Medium Pets </a>
+            </li>
+
+            <li>
+              <a href="products.html#large"> Large Pets </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         CRAFTSMANSHIP
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Our Craft</h3>
+
+          <ul>
+            <li>
+              <a href="materials.html"> Materials </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Custom Design </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Personalized Pieces </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Request a Quote </a>
+            </li>
+            <li>
+              <a href="404.html"> 404 </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon... </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+        <div class="footer-col footer-contact">
+          <h3>Get In Touch</h3>
+
+          <ul>
+            <li>
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+
+              <span> Your Service Area </span>
+            </li>
+
+            <li>
+              <i data-lucide="phone" aria-hidden="true"></i>
+
+              <a href="tel:+10000000000"> +91 (123) 789-8462 </a>
+            </li>
+
+            <li>
+              <i data-lucide="mail" aria-hidden="true"></i>
+
+              <a href="mailto:hello@pawstudio.com"> hello@pawstudio.com </a>
+            </li>
+
+            <li>
+              <i data-lucide="clock" aria-hidden="true"></i>
+
+              <span> Mon – Sat: 9 AM – 6 PM </span>
+            </li>
+          </ul>
+
+          <a href="customize.html" class="footer-book-btn">
+            <span>Start a Custom Order</span>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- =====================================================
+       FOOTER BOTTOM
+       ===================================================== -->
+
+      <div class="footer-bottom">
+        <p>
+          © 2026
+          <span class="paw">Paw</span><span class="studio">Studio</span>. All
+          Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms & Conditions </a>
+
+          <a href="cookies.html"> Cookies </a>
+
+          <!-- BACK TO TOP -->
+
+          <a
+            href="#"
+            class="top-btn"
+            aria-label="Back to top"
+            title="Back to top"
+          >
+            <i data-lucide="arrow-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="materials.js"></script>
+</body>
+</html>

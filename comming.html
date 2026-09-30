@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/logo.png" />
+
+    <title>Coming Soon</title>
+
+    <meta
+      name="description"
+      content="Something special is coming soon to PawStudio."
+    />
+
+    <!-- =====================================================
+       DM SANS
+  ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+       LUCIDE
+  ====================================================== -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- =====================================================
+       CSS
+  ====================================================== -->
+
+    <link rel="stylesheet" href="comming.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+       TOP RIGHT CONTROLS
+  ====================================================== -->
+
+    <div class="paw-coming-controls">
+      <!-- RTL / LTR -->
+
+      <button
+        type="button"
+        class="paw-coming-control"
+        id="pawComingDirectionToggle"
+        aria-label="Switch text direction"
+        title="Switch direction"
+      >
+        <i data-lucide="arrow-left-right"></i>
+      </button>
+
+      <!-- DARK MODE -->
+
+      <button
+        type="button"
+        class="paw-coming-control"
+        id="pawComingThemeToggle"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
+
+    <!-- =====================================================
+       COMING SOON PAGE
+  ====================================================== -->
+
+    <main class="paw-coming-page">
+      <!-- ===================================================
+         PAWSTUDIO LOGO
+    ==================================================== -->
+
+      <div class="paw-coming-logo">
+        <div class="logo">
+          <a href="index.html" aria-label="PawStudio Home">
+            <img src="images/logo.png" alt="PawStudio Logo" />
+          </a>
+
+          <div class="logo-text" onclick="window.location.href = 'index.html'">
+            <h1>
+              <span class="paw">Paw</span><span class="studio">Studio</span>
+            </h1>
+
+            <p>Custom Pet Furniture & Accessories</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================
+         MAIN CONTENT
+    ==================================================== -->
+
+      <div class="paw-coming-content">
+        <!-- BADGE -->
+
+        <div class="paw-coming-badge">
+          <span class="paw-coming-badge-dot"></span>
+
+          SOMETHING SPECIAL IS COMING
+        </div>
+
+        <!-- HEADING -->
+
+        <h2>
+          A New PawStudio
+          <span>Experience Is Coming.</span>
+        </h2>
+
+        <!-- DESCRIPTION -->
+
+        <p class="paw-coming-description">
+          We're putting the finishing touches on something thoughtful,
+          beautiful, and made especially for your favorite companions.
+        </p>
+
+        <!-- =================================================
+           COUNTDOWN
+      ================================================== -->
+
+        <div
+          class="paw-countdown"
+          id="pawCountdown"
+          aria-label="Countdown until PawStudio launches"
+        >
+          <!-- DAYS -->
+
+          <div class="paw-countdown-item">
+            <div class="paw-countdown-number" id="pawDays">00</div>
+
+            <span> Days </span>
+          </div>
+
+          <div class="paw-countdown-separator">:</div>
+
+          <!-- HOURS -->
+
+          <div class="paw-countdown-item">
+            <div class="paw-countdown-number" id="pawHours">00</div>
+
+            <span> Hours </span>
+          </div>
+
+          <div class="paw-countdown-separator">:</div>
+
+          <!-- MINUTES -->
+
+          <div class="paw-countdown-item">
+            <div class="paw-countdown-number" id="pawMinutes">00</div>
+
+            <span> Minutes </span>
+          </div>
+
+          <div class="paw-countdown-separator">:</div>
+
+          <!-- SECONDS -->
+
+          <div class="paw-countdown-item">
+            <div class="paw-countdown-number" id="pawSeconds">00</div>
+
+            <span> Seconds </span>
+          </div>
+        </div>
+
+        <!-- =================================================
+           COUNTDOWN STATUS
+      ================================================== -->
+
+        <div class="paw-coming-status" id="pawComingStatus">
+          <i data-lucide="sparkles"></i>
+
+          <span> We're getting everything ready. </span>
+        </div>
+
+        <!-- =================================================
+           ACTION
+      ================================================== -->
+
+        <div class="paw-coming-actions">
+          <a href="index.html" class="paw-coming-primary-btn">
+            <span> Back to Home </span>
+
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- =================================================
+           BOTTOM MESSAGE
+      ================================================== -->
+
+        <div class="paw-coming-bottom">
+          <i data-lucide="heart"></i>
+
+          <span> Made with care for every companion. </span>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+    <script src="comming.js"></script>
+    <script src="global.js"></script>
+  </body>
+</html>

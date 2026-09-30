@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/logo.png" />
+
+
+    <title>Page Not Found</title>
+
+    <meta
+      name="description"
+      content="The page you're looking for could not be found. Explore PawStudio's custom pet furniture and accessories."
+    />
+
+    <!-- DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="404.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- =====================================================
+       TOP RIGHT CONTROLS
+  ====================================================== -->
+
+    <div class="paw-404-controls">
+      <!-- RTL / LTR -->
+      <button
+        type="button"
+        class="paw-404-control"
+        id="paw404DirectionToggle"
+        aria-label="Switch text direction"
+        title="Switch direction"
+      >
+        <i data-lucide="arrow-left-right"></i>
+      </button>
+
+      <!-- DARK MODE -->
+      <button
+        type="button"
+        class="paw-404-control"
+        id="paw404ThemeToggle"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
+
+    <!-- =====================================================
+       404 PAGE
+  ====================================================== -->
+
+    <main class="paw-404-page">
+      <!-- ===================================================
+         PAWSTUDIO LOGO
+    ==================================================== -->
+
+      <div class="paw-404-logo">
+        <div class="logo">
+          <a href="index.html" aria-label="PawStudio Home">
+            <img src="images/logo.png" alt="PawStudio Logo" />
+          </a>
+
+          <div class="logo-text" onclick="window.location.href = 'index.html'">
+            <h1>
+              <span class="paw">Paw</span><span class="studio">Studio</span>
+            </h1>
+
+            <p>Custom Pet Furniture & Accessories</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================
+         404 CONTENT
+    ==================================================== -->
+
+      <div class="paw-404-content">
+        <!-- 404 NUMBER -->
+
+        <div class="paw-404-number" aria-hidden="true">404</div>
+
+        <!-- BADGE -->
+
+        <div class="paw-404-badge">
+          <span class="paw-404-badge-dot"></span>
+
+          PAGE NOT FOUND
+        </div>
+
+        <!-- HEADING -->
+
+        <h2>
+          Looks Like This Space
+          <span>Is Missing.</span>
+        </h2>
+
+        <!-- DESCRIPTION -->
+
+        <p class="paw-404-description">
+          We couldn't find the page you're looking for. Maybe your companion
+          wandered off with it. Let's get you back somewhere comfortable.
+        </p>
+
+        <!-- =================================================
+           ACTION BUTTONS
+      ================================================== -->
+
+        <div class="paw-404-actions">
+          <a href="index.html" class="paw-404-primary-btn">
+            <span> Back to Home </span>
+
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="products.html" class="paw-404-secondary-btn">
+            <span> Explore Products </span>
+
+            <i data-lucide="shopping-bag"></i>
+          </a>
+        </div>
+
+        <!-- =================================================
+           BOTTOM MESSAGE
+      ================================================== -->
+
+        <div class="paw-404-bottom">
+          <i data-lucide="heart"></i>
+
+          <span> Made with care for every companion. </span>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="global.js"></script>
+    <script src="404.js"></script>
+  </body>
+</html>

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.png" />
+    <title>Contact</title>
+    <!-- =========================================
+       GOOGLE FONT
+       ========================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================
+       LUCIDE ICONS
+       ========================================= -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- =========================================================
+     PAWSTUDIO
+     HEADER
+     ========================================================= -->
+
+    <header class="site-header">
+      <div class="header-container">
+        <!-- =====================================================
+         LOGO
+         ===================================================== -->
+
+        <div class="logo">
+          <a href="index.html" aria-label="PawStudio Home">
+            <img src="images/logo.png" alt="PawStudio Logo" />
+          </a>
+
+          <div class="logo-text" onclick="window.location.href = 'index.html'">
+            <h1>
+              <span class="paw">Paw</span><span class="studio">Studio</span>
+            </h1>
+
+            <p>Custom Pet Furniture & Accessories</p>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+        <nav class="navbar" id="mainNavbar" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <!-- =================================================
+             HOME
+             ================================================= -->
+
+            <li class="dropdown">
+              <a href="index.html">
+                <span>Home</span>
+
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </a>
+
+              <!-- HOME DROPDOWN -->
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="index.html">
+                    <i data-lucide="house" aria-hidden="true"></i>
+
+                    <span>Classic Home</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="home2.html">
+                    <i data-lucide="sparkles" aria-hidden="true"></i>
+
+                    <span>Modern Home</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- =================================================
+             ABOUT
+             ================================================= -->
+
+            <li>
+              <a href="about.html">
+                <span>About</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             PRODUCTS
+             ================================================= -->
+
+            <li class="dropdown">
+              <a href="products.html">
+                <span>Products</span>
+              </a>
+            </li>
+            <!-- =================================================
+             MATERIALS
+             ================================================= -->
+
+            <li>
+              <a href="materials.html">
+                <span>Materials</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             CUSTOM ORDERS
+             ================================================= -->
+
+            <li>
+              <a href="customize.html">
+                <span>Customize</span>
+              </a>
+            </li>
+
+            <!-- =================================================
+             CONTACT
+             ================================================= -->
+
+            <li>
+              <a href="contact.html" class="active">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- MOBILE CTA -->
+
+          <div class="mobile-book">
+            <a href="form.html" class="book-btn">
+              <span>Customize Yours</span>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- =====================================================
+         HEADER ACTIONS
+         ===================================================== -->
+
+        <div class="header-buttons">
+          <!-- RTL -->
+
+          <button
+            class="icon-btn"
+            id="pawstudioRtlToggle"
+            type="button"
+            title="RTL Mode"
+            aria-label="Toggle RTL mode"
+            aria-pressed="false"
+          >
+            <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- DARK MODE -->
+
+          <button
+            class="icon-btn"
+            id="pawstudioThemeToggle"
+            type="button"
+            title="Dark Mode"
+            aria-label="Toggle dark mode"
+          >
+            <i data-lucide="moon" aria-hidden="true"></i>
+          </button>
+
+          <!-- DESKTOP CTA -->
+
+          <a href="form.html" class="book-btn desktop-book">
+            <span>Customize Yours</span>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+
+          <!-- MOBILE MENU -->
+
+          <button
+            class="icon-btn menu-btn"
+            id="pawstudioMenuToggle"
+            type="button"
+            title="Menu"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+     CONTACT PAGE — HERO
+========================================================= -->
+    <section class="paw-contact-hero" id="contact-hero">
+      <div class="paw-contact-hero-overlay"></div>
+
+      <div class="paw-contact-hero-content">
+        <div class="section-badge">
+          <span class="section-badge-dot"></span>
+          CONTACT PAWSTUDIO
+        </div>
+
+        <h1 class="paw-contact-hero-title">
+          Let's Talk About
+          <span>Their Favorite Space.</span>
+        </h1>
+
+        <p class="paw-contact-hero-description">
+          Have a question, a custom idea, or simply want to say hello? We'd love
+          to hear from you.
+        </p>
+
+        <a href="#contact-details" class="paw-contact-hero-btn">
+          <span>Get in Touch</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact-details" id="contact-details">
+      <div class="contact-details-container">
+        <div class="section-badge">
+          <span class="section-badge-dot"></span>
+          GET IN TOUCH
+        </div>
+
+        <h2>We'd Love to Hear <span class="span">From You.</span></h2>
+
+        <p class="contact-details-intro">
+          Questions, custom ideas, or simply want to say hello? We're here to
+          help.
+        </p>
+
+        <div class="contact-info-grid">
+          <!-- Card 01 -->
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+
+            <span class="contact-card-number">01</span>
+
+            <h3>Visit Us</h3>
+
+            <p>
+              Hyderabad, Telangana<br />
+              India
+            </p>
+
+            <a href="#contact-map">
+              View on Map
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i data-lucide="phone"></i>
+            </div>
+
+            <span class="contact-card-number">02</span>
+
+            <h3>Call Us</h3>
+
+            <p>
+              +91 54321 56789<br />
+              Mon – Sat, 10 AM – 6 PM
+            </p>
+
+            <a href="tel:+910000000000">
+              Call Now
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i data-lucide="mail"></i>
+            </div>
+
+            <span class="contact-card-number">03</span>
+
+            <h3>Email Us</h3>
+
+            <p>
+              hello@pawstudio.com<br />
+              We usually reply within 1–2 days.
+            </p>
+
+            <a href="mailto:hello@pawstudio.com">
+              Send Email
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i data-lucide="clock-3"></i>
+            </div>
+
+            <span class="contact-card-number">04</span>
+
+            <h3>Working Hours</h3>
+
+            <p>
+              Monday – Saturday<br />
+              10 AM – 6 PM
+            </p>
+
+            <a href="#contact-details">
+              Our Hours
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i data-lucide="settings"></i>
+            </div>
+
+            <span class="contact-card-number">05</span>
+
+            <h3>Custom Orders</h3>
+
+            <p>Have something special in mind? Let's create it together.</p>
+
+            <a href="customization.html">
+              Start a Project
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     CONTACT MAP SECTION
+========================================= -->
+
+    <section class="contact-map-section" id="contact-map">
+      <div class="contact-map-container">
+        <!-- Section Badge -->
+        <div class="section-badge">
+          <span class="section-badge-dot"></span>
+          FIND PAWSTUDIO
+        </div>
+
+        <!-- Heading -->
+        <h2>Come Find <span class="span">Us.</span></h2>
+
+        <p class="contact-map-intro">
+          We'd love to welcome you and help bring your ideas for their perfect
+          space to life.
+        </p>
+
+        <!-- Map Card -->
+        <div class="contact-map-card">
+          <!-- =====================================
+           GOOGLE MAP
+      ====================================== -->
+
+          <div class="contact-map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.6816914330366!2d78.38655727521233!3d17.474942783427288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91e4830fc3cd%3A0xb121193072a9110!2sPretty%20Paw%20pet%20grooming%20Studio!5e0!3m2!1sen!2sin!4v1790747443858!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+
+          <!-- =====================================
+           LOCATION INFORMATION
+      ====================================== -->
+
+          <div class="contact-map-content">
+            <span class="contact-map-label"> OUR LOCATION </span>
+
+            <h3>A Place for Thoughtful Pet Living.</h3>
+
+            <p>
+              Visit us in Hyderabad and let's talk about creating something
+              special for your companion and your home.
+            </p>
+
+            <!-- Location -->
+            <div class="contact-location-detail">
+              <div class="contact-location-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+
+              <div class="contact-location-text">
+                <strong>Hyderabad, Telangana</strong>
+                <span>India</span>
+              </div>
+            </div>
+
+            <!-- Directions -->
+            <a
+              href="YOUR_GOOGLE_MAPS_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-direction-btn"
+            >
+              <span>Get Directions</span>
+
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================
+     CONTACT FAQ SECTION
+========================================= -->
+
+    <section class="contact-faq-section" id="contact-faq">
+      <div class="contact-faq-container">
+        <!-- Section Heading -->
+        <div class="contact-faq-heading">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            BEFORE YOU REACH OUT
+          </div>
+
+          <h2>Questions? We've <span class="span">Got You Covered.</span></h2>
+
+          <p>
+            A few answers to the questions we hear most often before starting a
+            project.
+          </p>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="contact-faq-list">
+          <!-- FAQ 01 -->
+          <div class="contact-faq-item active">
+            <button class="contact-faq-question" type="button">
+              <span> Do you offer custom-made pet furniture? </span>
+
+              <span class="contact-faq-icon">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+
+            <div class="contact-faq-answer">
+              <p>
+                Yes. We create custom pieces around your pet, available space,
+                and preferred style. You can share your requirements with us to
+                begin the process.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 02 -->
+          <div class="contact-faq-item">
+            <button class="contact-faq-question" type="button">
+              <span> Can I choose the size and materials? </span>
+
+              <span class="contact-faq-icon">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+
+            <div class="contact-faq-answer">
+              <p>
+                Yes. Depending on the piece, you can customize dimensions,
+                materials, finishes, colors, and other details to suit your pet
+                and home.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 03 -->
+          <div class="contact-faq-item">
+            <button class="contact-faq-question" type="button">
+              <span> How long does a custom order take? </span>
+
+              <span class="contact-faq-icon">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+
+            <div class="contact-faq-answer">
+              <p>
+                Timelines depend on the design and level of customization. We'll
+                discuss the expected timeline with you before your project
+                begins.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 04 -->
+          <div class="contact-faq-item">
+            <button class="contact-faq-question" type="button">
+              <span> Can you design something for a small space? </span>
+
+              <span class="contact-faq-icon">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+
+            <div class="contact-faq-answer">
+              <p>
+                Absolutely. Space is an important part of our customization
+                process, and we can design pieces around the dimensions and
+                layout of your home.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 05 -->
+          <div class="contact-faq-item">
+            <button class="contact-faq-question" type="button">
+              <span> How do I start a custom project? </span>
+
+              <span class="contact-faq-icon">
+                <i data-lucide="plus"></i>
+              </span>
+            </button>
+
+            <div class="contact-faq-answer">
+              <p>
+                Simply get in touch with us and share what you have in mind.
+                We'll understand your requirements and guide you through the
+                next steps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     CONTACT FINAL CTA
+========================================= -->
+
+    <section class="contact-final-cta" id="contact-cta">
+      <div class="contact-final-cta-container">
+        <div class="section-badge">
+          <span class="section-badge-dot"></span>
+          LET'S CREATE TOGETHER
+        </div>
+
+        <h2>
+          Their Favorite Place<br />
+          <span class="span"> Starts With Your Idea. </span>
+        </h2>
+
+        <p>
+          Whether you have a clear vision or just a starting idea, we'd love to
+          help turn it into something made especially for them.
+        </p>
+
+        <a href="customization.html" class="contact-final-cta-btn">
+          <span>Start Your Project</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+    </section>
+    <!-- =========================================================
+     PAWSTUDIO
+     FOOTER
+     ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- =====================================================
+         BRAND
+         ===================================================== -->
+
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <a href="index.html" aria-label="PawStudio Home">
+              <img src="images/logo.png" alt="PawStudio Logo" />
+            </a>
+
+            <div class="footer-branding">
+              <h2>
+                <span class="paw">Paw</span><span class="studio">Studio</span>
+              </h2>
+
+              <p>Custom Pet Furniture & Accessories</p>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            Thoughtfully crafted furniture and accessories designed around your
+            pet's comfort, personality, and everyday life.
+          </p>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social-media">
+            <!-- INSTAGRAM -->
+
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <i data-lucide="camera" aria-hidden="true"></i>
+            </a>
+
+            <!-- FACEBOOK -->
+
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <i data-lucide="users" aria-hidden="true"></i>
+            </a>
+
+            <!-- YOUTUBE -->
+
+            <a href="#" aria-label="YouTube" title="YouTube">
+              <i data-lucide="play" aria-hidden="true"></i>
+            </a>
+
+            <!-- EMAIL -->
+
+            <a href="mailto:info@aquacare.com" aria-label="Email" title="Email">
+              <i data-lucide="mail" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         QUICK LINKS
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="products.html">Products</a>
+            </li>
+
+            <li>
+              <a href="materials.html">Materials</a>
+            </li>
+
+            <li>
+              <a href="customize.html">Customize</a>
+            </li>
+
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         EXPLORE
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+
+          <ul>
+            <li>
+              <a href="products.html#pet-beds"> Pet Beds </a>
+            </li>
+
+            <li>
+              <a href="products.html#furniture"> Pet Furniture </a>
+            </li>
+
+            <li>
+              <a href="products.html#accessories"> Accessories </a>
+            </li>
+
+            <li>
+              <a href="products.html#small"> Small Pets </a>
+            </li>
+
+            <li>
+              <a href="products.html#medium"> Medium Pets </a>
+            </li>
+
+            <li>
+              <a href="products.html#large"> Large Pets </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         CRAFTSMANSHIP
+         ===================================================== -->
+
+        <div class="footer-col">
+          <h3>Our Craft</h3>
+
+          <ul>
+            <li>
+              <a href="materials.html"> Materials </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Custom Design </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Personalized Pieces </a>
+            </li>
+
+            <li>
+              <a href="customize.html"> Request a Quote </a>
+            </li>
+            <li>
+              <a href="404.html"> 404 </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon... </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+        <div class="footer-col footer-contact">
+          <h3>Get In Touch</h3>
+
+          <ul>
+            <li>
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+
+              <span> Your Service Area </span>
+            </li>
+
+            <li>
+              <i data-lucide="phone" aria-hidden="true"></i>
+
+              <a href="tel:+10000000000"> +91 (123) 789-8462 </a>
+            </li>
+
+            <li>
+              <i data-lucide="mail" aria-hidden="true"></i>
+
+              <a href="mailto:hello@pawstudio.com"> hello@pawstudio.com </a>
+            </li>
+
+            <li>
+              <i data-lucide="clock" aria-hidden="true"></i>
+
+              <span> Mon – Sat: 9 AM – 6 PM </span>
+            </li>
+          </ul>
+
+          <a href="customize.html" class="footer-book-btn">
+            <span>Start a Custom Order</span>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- =====================================================
+       FOOTER BOTTOM
+       ===================================================== -->
+
+      <div class="footer-bottom">
+        <p>
+          © 2026
+          <span class="paw">Paw</span><span class="studio">Studio</span>. All
+          Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms & Conditions </a>
+
+          <a href="cookies.html"> Cookies </a>
+
+          <!-- BACK TO TOP -->
+
+          <a
+            href="#"
+            class="top-btn"
+            aria-label="Back to top"
+            title="Back to top"
+          >
+            <i data-lucide="arrow-up" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>
