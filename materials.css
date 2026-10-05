@@ -206,7 +206,7 @@
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -365,7 +365,7 @@
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -558,7 +558,7 @@
   margin: 0;
 
   font-family: "DM Sans", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -774,7 +774,7 @@
   margin: 0;
 
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -944,7 +944,7 @@
 .paw-materials-cta {
   width: 100%;
   padding: 85px 6%;
-  background: var(--site-bg);
+  background: var(--surface);
   box-sizing: border-box;
 }
 
@@ -967,7 +967,7 @@
 
   text-align: center;
 
-  background: var(--surface);
+  background: var(--site-bg);
   border: 1px solid var(--border);
   border-radius: 30px;
 

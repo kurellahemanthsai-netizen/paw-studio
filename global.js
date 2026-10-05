@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!mainLink) return;
 
     mainLink.addEventListener("click", function (event) {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 1100) {
         event.preventDefault();
 
         dropdowns.forEach(function (item) {
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelectorAll(".nav-links a:not(.dropdown > a)")
     .forEach(function (link) {
       link.addEventListener("click", function () {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth <= 1100) {
           navbar.classList.remove("active");
 
           dropdowns.forEach(function (dropdown) {
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
      ======================================================= */
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 1100) {
       navbar?.classList.remove("active");
 
       dropdowns.forEach(function (dropdown) {

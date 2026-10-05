@@ -185,7 +185,7 @@ body.dark-mode .paw-custom-hero-btn {
   color: var(--text);
 
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.045em;
@@ -362,7 +362,7 @@ body.dark-mode .paw-custom-hero-btn {
   color: var(--text);
 
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.045em;
@@ -602,7 +602,7 @@ body.dark-mode .paw-custom-hero-btn {
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
 
   font-weight: 500;
 
@@ -724,7 +724,7 @@ body.dark-mode .paw-custom-hero-btn {
 
   padding: 80px 24px;
 
-  background: var(--site-bg);
+  background: var(--surface);
 
   overflow: hidden;
 }
@@ -742,7 +742,7 @@ body.dark-mode .paw-custom-hero-btn {
 
   padding: 70px 70px 68px;
 
-  background: var(--surface);
+  background: var(--site-bg);
 
   border: 1px solid var(--border);
   border-radius: 38px;

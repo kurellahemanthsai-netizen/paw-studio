@@ -318,7 +318,7 @@ body.dark-mode .paw-about-hero-button-icon{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -515,7 +515,7 @@ body.dark-mode .paw-about-hero-button-icon{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -804,7 +804,7 @@ body.dark-mode .paw-about-hero-button-icon{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -1049,7 +1049,7 @@ body.dark-mode .paw-about-hero-button-icon{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.02;
 
   letter-spacing: -0.055em;
@@ -1204,7 +1204,7 @@ body.dark-mode .paw-about-hero-button-icon{
 .paw2-cta {
   width: 100%;
   padding: 78px 6%;
-  background: var(--site-bg);
+  background: var(--surface);
   box-sizing: border-box;
 }
 
@@ -1223,7 +1223,7 @@ body.dark-mode .paw-about-hero-button-icon{
 
   text-align: center;
 
-  background: var(--surface);
+  background: var(--site-bg);
   border: 1px solid var(--surface);
   border-radius: 38px;
 

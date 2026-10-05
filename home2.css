@@ -360,62 +360,6 @@ body.dark-mode .paw2-btn-primary {
   background: var(--border);
 }
 
-/* =========================================================
-   BOTTOM BAR
-========================================================= */
-
-.paw2-hero-bottom {
-  position: absolute;
-
-  left: 0;
-  bottom: 28px;
-
-  width: 100%;
-
-  z-index: 5;
-}
-
-.paw2-bottom-inner {
-  display: flex;
-  align-items: center;
-}
-
-.paw2-scroll-indicator {
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  margin-left: auto;
-
-  color: var(--muted);
-
-  font-size: 10px;
-
-  letter-spacing: 0.14em;
-
-  text-transform: uppercase;
-}
-
-.paw2-scroll-icon {
-  width: 29px;
-  height: 29px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--border);
-
-  border-radius: 50%;
-}
-
-.paw2-scroll-icon svg {
-  width: 13px;
-  height: 13px;
-
-  animation: paw2-scroll 1.7s ease-in-out infinite;
-}
 
 /* =========================================================
    ANIMATIONS
@@ -647,7 +591,7 @@ body.dark-mode .paw2-btn-primary {
 .paw2-craft-story-title {
   max-width: 520px;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
 
   font-weight: 500;
 
@@ -861,7 +805,7 @@ body.dark-mode .paw2-btn-primary {
 .paw2-gallery-title {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 0.98;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -1103,7 +1047,7 @@ body.dark-mode .paw2-gallery-info p{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
 
   line-height: 0.98;
 
@@ -1307,7 +1251,7 @@ body.dark-mode .paw2-gallery-info p{
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   line-height: 1.05;
 
@@ -1509,6 +1453,7 @@ body.dark-mode .paw2-gallery-info p{
   gap: 13px;
 
   margin-top: 32px;
+  
 
   color: white;
   background: var(--primary);
@@ -1524,6 +1469,9 @@ body.dark-mode .paw2-gallery-info p{
   font-weight: 700;
 
   transition: color var(--transition);
+}
+.paw2-signature-cta span{
+  padding: 5px;
 }
 
 .paw2-signature-cta:hover {
@@ -1586,7 +1534,7 @@ body.dark-mode .paw2-gallery-info p{
 .paw2-process-title {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 0.98;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -1804,7 +1752,7 @@ body.dark-mode .paw2-gallery-info p{
 .paw2-materials-title {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 0.98;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -2109,7 +2057,7 @@ body.dark-mode .paw2-gallery-info p{
 .paw2-lifestyle-title {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 0.98;
   letter-spacing: -0.055em;
   font-weight: 500;
@@ -2326,7 +2274,7 @@ body.dark-mode .paw2-gallery-info p{
 .paw2-final-cta {
   position: relative;
   padding: 90px 0 100px;
-  background: var(--site-bg);
+  background: var(--surface);
   color: var(--text);
   overflow: hidden;
 }
@@ -2343,7 +2291,7 @@ body.dark-mode .paw2-gallery-info p{
   padding: 65px 50px;
   border: 1px solid var(--border);
   border-radius: 30px;
-  background: var(--surface);
+  background: var(--site-bg);
   display: flex;
   align-items: center;
   justify-content: center;
