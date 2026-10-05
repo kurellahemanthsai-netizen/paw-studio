@@ -2460,18 +2460,23 @@ body.dark-mode .paw2-final-cta-button-icon{
    PAWSTUDIO HOME 2
    RESPONSIVE MEDIA QUERIES
    ========================================================= */
+/* =========================================================
+   PAWSTUDIO HOME 2
+   COMPLETE RESPONSIVE MEDIA QUERIES
+   PROPER ALIGNMENT VERSION
+   ========================================================= */
 
 
 /* =========================================================
    SAMSUNG GALAXY S8+
    360px — 740px
-========================================================= */
+   ========================================================= */
 
 @media screen and (min-width: 360px) and (max-width: 740px) {
 
-  /* -------------------------------------------------------
-     GLOBAL MOBILE SAFETY
-  ------------------------------------------------------- */
+  /* =========================================================
+     GLOBAL
+     ========================================================= */
 
   .paw2-hero,
   .paw2-craft-story,
@@ -2485,107 +2490,95 @@ body.dark-mode .paw2-final-cta-button-icon{
     overflow: hidden;
   }
 
-  /* -------------------------------------------------------
-     HERO
-  ------------------------------------------------------- */
+
+  /* =========================================================
+     SECTION 01 — HERO
+     ========================================================= */
 
   .paw2-hero {
-    min-height: 100svh;
-    min-height: 720px;
+    min-height: 740px;
   }
 
   .paw2-hero-image {
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.03);
+    inset: -4%;
+    width: 108%;
+    height: 108%;
     background-position: 62% center;
   }
 
   .paw2-hero-overlay {
     background: linear-gradient(
       90deg,
-      color-mix(in srgb, var(--site-bg) 94%, transparent) 0%,
-      color-mix(in srgb, var(--site-bg) 84%, transparent) 45%,
-      color-mix(in srgb, var(--site-bg) 45%, transparent) 100%
+      color-mix(in srgb, var(--site-bg) 96%, transparent) 0%,
+      color-mix(in srgb, var(--site-bg) 88%, transparent) 38%,
+      color-mix(in srgb, var(--site-bg) 60%, transparent) 72%,
+      transparent 100%
     );
   }
 
   .paw2-hero-container {
-    min-height: 100svh;
-    min-height: 720px;
-
-    width: 100%;
-    padding: 110px 20px 95px;
-
+    min-height: 740px;
+    padding: 105px 20px 100px;
     align-items: center;
   }
 
   .paw2-hero-content {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
+    margin: 0;
   }
 
   .paw2-hero-badge {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .paw2-hero-title {
+    width: 100%;
     max-width: 100%;
-
-    font-size: clamp(2.6rem, 11vw, 3.8rem);
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
     line-height: 0.98;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.045em;
   }
 
   .paw2-hero-description {
+    width: 100%;
     max-width: 100%;
-    margin-top: 21px;
-
+    margin-top: 20px;
     font-size: 14px;
     line-height: 1.7;
   }
 
   .paw2-hero-actions {
-    width: 100%;
-
-    flex-direction: column;
-    align-items: stretch;
-
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 27px;
+    margin-top: 26px;
   }
 
   .paw2-btn,
   .paw2-story-btn {
-    width: 100%;
-    min-height: 50px;
-    justify-content: center;
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 12px;
   }
 
   .paw2-craft-features {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-    margin-top: 38px;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 36px;
   }
 
   .paw2-craft-feature {
-    width: 100%;
-  }
-
-  .paw2-feature-divider {
-    display: none;
+    gap: 8px;
   }
 
   .paw2-craft-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  .paw2-craft-icon svg {
+    width: 15px;
+    height: 15px;
   }
 
   .paw2-craft-text strong {
@@ -2596,23 +2589,22 @@ body.dark-mode .paw2-final-cta-button-icon{
     font-size: 9px;
   }
 
-  .paw2-hero-bottom {
-    bottom: 17px;
+  .paw2-feature-divider {
+    height: 25px;
   }
 
-  .paw2-bottom-inner {
-    padding: 0 20px;
+  .paw2-hero-bottom {
+    bottom: 18px;
   }
 
   .paw2-scroll-indicator {
-    margin-left: 0;
-    margin-right: auto;
+    font-size: 9px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 02 — CRAFTSMANSHIP
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-craft-story {
     padding: 80px 20px 90px;
@@ -2620,8 +2612,11 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-craft-container {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 42px;
   }
 
   .paw2-craft-story-visual {
@@ -2630,14 +2625,13 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-craft-image-wrap {
     width: 100%;
-    height: 390px;
+    height: 330px;
     border-radius: 20px;
   }
 
   .paw2-craft-image-label {
-    left: 16px;
-    bottom: 16px;
-
+    left: 17px;
+    bottom: 17px;
     padding: 8px 12px;
     font-size: 9px;
   }
@@ -2645,7 +2639,7 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-craft-story-content {
     width: 100%;
     max-width: 100%;
-    padding-right: 0;
+    padding: 0;
   }
 
   .paw2-craft-badge {
@@ -2653,17 +2647,17 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-craft-story-title {
+    width: 100%;
     max-width: 100%;
-
-    font-size: clamp(2.4rem, 10vw, 3.3rem);
+    font-size: clamp(2.4rem, 10vw, 3.2rem);
     line-height: 1;
   }
 
   .paw2-craft-story-description {
+    width: 100%;
     max-width: 100%;
-
-    margin-top: 21px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 13px;
     line-height: 1.75;
   }
 
@@ -2672,9 +2666,8 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-craft-point {
-    grid-template-columns: 35px minmax(0, 1fr) 30px;
-    gap: 11px;
-
+    grid-template-columns: 38px minmax(0, 1fr) 30px;
+    gap: 12px;
     padding: 18px 0;
   }
 
@@ -2685,27 +2678,32 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-craft-point-content p {
     max-width: 100%;
     font-size: 11px;
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   .paw2-craft-point-arrow {
-    width: 29px;
-    height: 29px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .paw2-craft-point:hover {
+    padding-left: 0;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 03 — GALLERY
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-gallery {
-    padding: 85px 0 90px;
+    padding: 90px 0 100px;
     margin-top: 0;
   }
 
   .paw2-gallery-heading {
     width: calc(100% - 40px);
-    margin: 0 auto 45px;
+    max-width: 100%;
+    margin: 0 auto 48px;
   }
 
   .paw2-gallery-heading .section-badge {
@@ -2720,66 +2718,64 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-gallery-description {
     max-width: 100%;
     margin-top: 20px;
-
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
   }
 
   .paw2-gallery-track {
     gap: 14px;
-    animation-duration: 38s;
   }
 
   .paw2-gallery-item {
-    flex: 0 0 300px;
-    width: 300px;
+    flex: 0 0 285px;
+    width: 285px;
   }
 
   .paw2-gallery-image-wrap {
-    height: 340px;
-    border-radius: 3px;
+    height: 300px;
   }
 
   .paw2-gallery-overlay {
-    padding: 22px;
+    padding: 20px;
   }
 
   .paw2-gallery-number {
-    top: 18px;
-    left: 19px;
+    top: 17px;
+    left: 18px;
+    font-size: 10px;
   }
 
   .paw2-gallery-info {
-    padding-right: 45px;
+    padding-right: 42px;
   }
 
   .paw2-gallery-info h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .paw2-gallery-info p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .paw2-gallery-arrow {
-    right: 18px;
-    bottom: 20px;
-
-    width: 37px;
-    height: 37px;
+    right: 17px;
+    bottom: 18px;
+    width: 34px;
+    height: 34px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 04 — SIGNATURE COLLECTION
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-signature {
-    padding: 85px 20px 95px;
+    padding: 90px 20px 100px;
     margin-top: 0;
   }
 
   .paw2-signature-heading {
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 48px;
   }
@@ -2796,36 +2792,41 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-signature-description {
     max-width: 100%;
     margin-top: 20px;
-
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
   }
 
   .paw2-signature-layout {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 100%;
+    gap: 35px;
+  }
+
+  .paw2-signature-visual {
+    width: 100%;
   }
 
   .paw2-signature-image-wrap {
     width: 100%;
-    height: 380px;
+    height: 350px;
   }
 
   .paw2-signature-image-meta {
     left: 18px;
     bottom: 18px;
-
     font-size: 9px;
   }
 
   .paw2-signature-content {
+    width: 100%;
+    max-width: 100%;
     padding: 0;
   }
 
   .paw2-signature-eyebrow {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
     font-size: 10px;
   }
 
@@ -2835,26 +2836,23 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-signature-product-title {
+    width: 100%;
     max-width: 100%;
-    padding-right: 35px;
-
-    font-size: clamp(2rem, 8vw, 2.7rem);
+    font-size: 2.2rem;
     line-height: 1.05;
   }
 
   .paw2-signature-product-description {
     max-width: 100%;
-
-    margin: 18px 0 30px;
-    font-size: 13px;
-    line-height: 1.75;
+    margin: 17px 0 28px;
+    font-size: 12px;
+    line-height: 1.7;
   }
 
   .paw2-signature-product {
-    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    grid-template-columns: 32px minmax(0, 1fr) 34px;
+    min-height: 56px;
     gap: 10px;
-
-    min-height: 58px;
   }
 
   .paw2-signature-product-name {
@@ -2866,14 +2864,26 @@ body.dark-mode .paw2-final-cta-button-icon{
     height: 30px;
   }
 
+  .paw2-signature-product:hover,
+  .paw2-signature-product.active {
+    padding-left: 7px;
+  }
+
   .paw2-signature-cta {
-    margin-top: 26px;
+    margin-top: 25px;
+    font-size: 12px;
+  }
+
+  .paw2-signature-cta-icon {
+    width: 36px;
+    height: 36px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 05 — PROCESS
-  ------------------------------------------------------- */
+     PROPER VERTICAL ALIGNMENT
+     ========================================================= */
 
   .paw2-process {
     padding: 85px 20px 95px;
@@ -2881,8 +2891,10 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-process-heading {
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 55px;
+    text-align: center;
   }
 
   .paw2-process-heading .section-badge {
@@ -2890,45 +2902,57 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-process-title {
+    width: 100%;
+    max-width: 100%;
     font-size: clamp(2.4rem, 10vw, 3.2rem);
     line-height: 1;
   }
 
   .paw2-process-description {
+    width: 100%;
     max-width: 100%;
-    margin-top: 20px;
-
-    font-size: 14px;
+    margin: 19px auto 0;
+    font-size: 13px;
     line-height: 1.7;
   }
 
   .paw2-process-timeline {
-    display: grid;
-    grid-template-columns: 1fr;
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .paw2-process-line {
-    top: 0;
-    bottom: 0;
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
     left: 20px;
     right: auto;
-
     width: 1px;
     height: auto;
+    background: var(--border);
+    z-index: 0;
   }
 
   .paw2-process-line-progress {
+    display: block;
     width: 100%;
     height: 0;
+    background: var(--secondary);
+    transition: height 0.5s ease;
   }
 
   .paw2-process-step {
+    position: relative;
     width: 100%;
-    padding: 0 0 38px 55px;
-
+    min-width: 0;
+    padding: 0 0 42px 58px;
     text-align: left;
+    z-index: 1;
   }
 
   .paw2-process-step:last-child {
@@ -2936,35 +2960,28 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-process-step-top {
-    min-height: auto;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 42px;
   }
 
   .paw2-process-number {
     position: absolute;
-
-    left: 0;
+    left: -58px;
     top: 0;
-
     width: 42px;
     height: 42px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0;
-
     border: 1px solid var(--border);
     border-radius: 50%;
-
     background: var(--site-bg);
-
     font-size: 10px;
+    line-height: 1;
+    z-index: 3;
   }
 
   .paw2-process-dot {
@@ -2978,37 +2995,52 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-process-step-content {
-    max-width: 100%;
+    width: 100%;
+    max-width: none;
     margin: 0;
-    padding-top: 2px;
+    padding-top: 1px;
+    text-align: left;
   }
 
   .paw2-process-step-label {
     margin-bottom: 10px;
     font-size: 9px;
+    line-height: 1;
+    text-align: left;
   }
 
   .paw2-process-step-content h3 {
+    margin: 0;
     font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
   }
 
   .paw2-process-step-content p {
-    margin-top: 12px;
-    font-size: 13px;
+    width: 100%;
+    max-width: 100%;
+    margin: 11px 0 0;
+    font-size: 12px;
     line-height: 1.7;
+    text-align: left;
+  }
+
+  .paw2-process-step:hover .paw2-process-number {
+    transform: none;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 06 — MATERIALS
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-materials {
-    padding: 85px 20px 95px;
+    padding: 90px 20px 100px;
     margin-top: 0;
   }
 
   .paw2-materials-heading {
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 48px;
   }
@@ -3025,16 +3057,16 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-materials-subtitle {
     max-width: 100%;
     margin-top: 20px;
-
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
   }
 
   .paw2-materials-layout {
-    grid-template-columns: 1fr;
-
-    gap: 38px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 100%;
+    gap: 35px;
   }
 
   .paw2-materials-content {
@@ -3044,8 +3076,7 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-materials-intro {
     max-width: 100%;
     margin-bottom: 28px;
-
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.75;
   }
 
@@ -3056,13 +3087,14 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-material-card,
   .paw2-material-card-wide {
-    min-height: 175px;
-    padding: 21px 20px;
+    grid-column: auto;
+    min-height: 165px;
+    padding: 20px;
   }
 
   .paw2-material-card-content {
-    max-width: 100%;
-    margin-top: 22px;
+    max-width: calc(100% - 20px);
+    margin-top: 20px;
   }
 
   .paw2-material-card-content h3 {
@@ -3071,8 +3103,8 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-material-card-content p {
     max-width: 100%;
-    font-size: 12px;
-    line-height: 1.65;
+    font-size: 11px;
+    line-height: 1.6;
   }
 
   .paw2-material-card-arrow {
@@ -3082,31 +3114,32 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-materials-image-wrap {
     width: 100%;
-    min-height: 380px;
-    height: 380px;
+    height: 340px;
+    min-height: 340px;
   }
 
   .paw2-materials-image {
-    min-height: 380px;
+    min-height: 340px;
   }
 
   .paw2-materials-image-caption {
-    left: 20px;
-    bottom: 20px;
+    left: 18px;
+    bottom: 18px;
     font-size: 9px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 07 — LIFESTYLE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-lifestyle {
-    padding: 85px 20px 95px;
+    padding: 90px 20px 100px;
     margin-top: 0;
   }
 
   .paw2-lifestyle-heading {
+    width: 100%;
     max-width: 100%;
     margin: 0 auto 48px;
   }
@@ -3123,59 +3156,59 @@ body.dark-mode .paw2-final-cta-button-icon{
   .paw2-lifestyle-subtitle {
     max-width: 100%;
     margin-top: 20px;
-
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
   }
 
   .paw2-lifestyle-grid {
     grid-template-columns: 1fr;
-
-    gap: 18px;
+    gap: 16px;
+    width: 100%;
     max-width: 100%;
   }
 
   .paw2-lifestyle-image-wrap {
-    height: 330px;
+    height: 280px;
   }
 
   .paw2-lifestyle-image-number {
     top: 16px;
     left: 16px;
-
-    min-width: 34px;
-    height: 28px;
   }
 
   .paw2-lifestyle-card-content {
-    min-height: 205px;
-    padding: 25px 22px 28px;
+    min-height: 190px;
+    padding: 22px 20px 25px;
   }
 
   .paw2-lifestyle-label {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
+    font-size: 9px;
   }
 
   .paw2-lifestyle-card-content h3 {
     max-width: calc(100% - 35px);
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .paw2-lifestyle-card-content p {
-    max-width: 100%;
-    font-size: 12px;
-    line-height: 1.7;
+    max-width: calc(100% - 25px);
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.65;
   }
 
   .paw2-lifestyle-arrow {
-    right: 20px;
-    bottom: 23px;
+    right: 18px;
+    bottom: 19px;
+    width: 32px;
+    height: 32px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SECTION 08 — FINAL CTA
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-final-cta {
     padding: 65px 20px 75px;
@@ -3183,36 +3216,148 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-final-cta-box {
     width: 100%;
-    min-height: 390px;
-
+    max-width: 100%;
+    min-height: 330px;
     padding: 45px 22px;
-
     border-radius: 22px;
   }
 
   .paw2-final-cta-content {
+    width: 100%;
     max-width: 100%;
   }
 
-  .paw2-final-cta-content .section-badge {
-    margin-bottom: 18px;
-  }
-
   .paw2-final-cta-title {
-    font-size: clamp(2.3rem, 10vw, 3.1rem);
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
     line-height: 1;
   }
 
   .paw2-final-cta-description {
     max-width: 100%;
-
-    margin-top: 20px;
-    font-size: 13px;
+    margin-top: 17px;
+    font-size: 12px;
     line-height: 1.7;
   }
 
   .paw2-final-cta-button {
-    margin-top: 25px;
+    margin-top: 24px;
+    font-size: 12px;
+  }
+
+
+  /* =========================================================
+     MOBILE RTL
+     ========================================================= */
+
+  body.rtl .paw2-hero-content {
+    margin: 0;
+    text-align: right;
+  }
+
+  body.rtl .paw2-hero-actions {
+    justify-content: flex-start;
+  }
+
+  body.rtl .paw2-craft-story,
+  body.rtl .paw2-gallery,
+  body.rtl .paw2-signature,
+  body.rtl .paw2-process,
+  body.rtl .paw2-materials,
+  body.rtl .paw2-lifestyle,
+  body.rtl .paw2-final-cta {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-craft-container {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-craft-story-content,
+  body.rtl .paw2-craft-story-title,
+  body.rtl .paw2-craft-story-description {
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-number {
+    left: auto;
+    right: 18px;
+  }
+
+  body.rtl .paw2-gallery-info {
+    padding-right: 0;
+    padding-left: 42px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-arrow {
+    right: auto;
+    left: 17px;
+  }
+
+  body.rtl .paw2-signature-number {
+    right: auto;
+    left: 0;
+  }
+
+  body.rtl .paw2-signature-product {
+    text-align: right;
+  }
+
+  body.rtl .paw2-signature-product:hover,
+  body.rtl .paw2-signature-product.active {
+    padding-left: 0;
+    padding-right: 7px;
+  }
+
+  body.rtl .paw2-material-card-arrow {
+    right: auto;
+    left: 18px;
+  }
+
+  body.rtl .paw2-materials-image-caption {
+    left: auto;
+    right: 18px;
+  }
+
+  body.rtl .paw2-lifestyle-image-number {
+    left: auto;
+    right: 16px;
+  }
+
+  body.rtl .paw2-lifestyle-card-content {
+    text-align: right;
+  }
+
+  body.rtl .paw2-lifestyle-arrow {
+    right: auto;
+    left: 18px;
+  }
+
+  /* RTL PROCESS */
+  body.rtl .paw2-process-timeline {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-process-line {
+    left: auto;
+    right: 20px;
+  }
+
+  body.rtl .paw2-process-step {
+    padding: 0 58px 42px 0;
+    text-align: right;
+  }
+
+  body.rtl .paw2-process-number {
+    left: auto;
+    right: -58px;
+  }
+
+  body.rtl .paw2-process-step-content,
+  body.rtl .paw2-process-step-label,
+  body.rtl .paw2-process-step-content h3,
+  body.rtl .paw2-process-step-content p {
+    text-align: right;
   }
 }
 
@@ -3220,117 +3365,95 @@ body.dark-mode .paw2-final-cta-button-icon{
 /* =========================================================
    iPAD MINI
    768px — 820px
-========================================================= */
+   ========================================================= */
 
 @media screen and (min-width: 768px) and (max-width: 820px) {
 
-  /* -------------------------------------------------------
+  /* =========================================================
      HERO
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-hero {
-    min-height: 760px;
+    min-height: 800px;
   }
 
   .paw2-hero-image {
     background-position: 62% center;
   }
 
-  .paw2-hero-overlay {
-    background: linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--site-bg) 91%, transparent) 0%,
-      color-mix(in srgb, var(--site-bg) 67%, transparent) 42%,
-      transparent 76%
-    );
-  }
-
   .paw2-hero-container {
-    min-height: 760px;
-    padding: 110px 45px 105px;
+    min-height: 800px;
+    padding: 120px 35px;
   }
 
   .paw2-hero-content {
-    width: min(560px, 100%);
-    margin-left: 35px;
+    width: min(600px, 100%);
+    margin-left: 20px;
   }
 
   .paw2-hero-title {
-    font-size: 4rem;
+    max-width: 620px;
+    font-size: clamp(3.3rem, 8vw, 4.6rem);
+    line-height: 0.95;
   }
 
   .paw2-hero-description {
-    max-width: 450px;
-    font-size: 15px;
-  }
-
-  .paw2-hero-actions {
-    gap: 12px;
+    max-width: 500px;
+    margin-top: 23px;
+    font-size: 14px;
   }
 
   .paw2-craft-features {
-    gap: 14px;
-    margin-top: 43px;
-  }
-
-  .paw2-craft-feature {
-    gap: 8px;
-  }
-
-  .paw2-craft-text strong {
-    font-size: 11px;
-  }
-
-  .paw2-craft-text small {
-    font-size: 9px;
+    margin-top: 45px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      CRAFTSMANSHIP
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-craft-story {
-    padding: 100px 40px 110px;
-    margin-top: 0;
+    padding: 100px 35px 110px;
   }
 
   .paw2-craft-container {
     grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 45px;
+    max-width: 680px;
+    margin: 0 auto;
   }
 
   .paw2-craft-image-wrap {
-    height: 470px;
+    height: 400px;
   }
 
   .paw2-craft-story-content {
     max-width: 680px;
-    margin: 0 auto;
-    padding-right: 0;
+    padding: 0;
   }
 
   .paw2-craft-story-title {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
   }
 
   .paw2-craft-story-description {
     max-width: 620px;
+    font-size: 14px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      GALLERY
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-gallery {
-    padding: 105px 0 110px;
-    margin-top: 0;
+    padding: 105px 0 115px;
   }
 
   .paw2-gallery-heading {
-    width: calc(100% - 80px);
-    margin-bottom: 55px;
+    width: calc(100% - 70px);
+    max-width: 700px;
+    margin-bottom: 60px;
   }
 
   .paw2-gallery-title {
@@ -3338,26 +3461,30 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-gallery-description {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .paw2-gallery-item {
-    flex: 0 0 340px;
+    flex-basis: 340px;
     width: 340px;
   }
 
   .paw2-gallery-image-wrap {
-    height: 365px;
+    height: 350px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SIGNATURE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-signature {
-    padding: 105px 40px 115px;
-    margin-top: 0;
+    padding: 105px 35px 115px;
+  }
+
+  .paw2-signature-heading {
+    max-width: 700px;
+    margin-bottom: 60px;
   }
 
   .paw2-signature-title {
@@ -3366,106 +3493,129 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-signature-layout {
     grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 45px;
     max-width: 680px;
   }
 
   .paw2-signature-image-wrap {
-    height: 470px;
-  }
-
-  .paw2-signature-content {
-    padding: 0;
+    height: 430px;
   }
 
   .paw2-signature-product-title {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      PROCESS
-  ------------------------------------------------------- */
+     PROPER VERTICAL ALIGNMENT
+     ========================================================= */
 
   .paw2-process {
-    padding: 105px 40px 115px;
+    padding: 100px 35px 110px;
     margin-top: 0;
   }
 
   .paw2-process-heading {
-    margin-bottom: 65px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 65px;
   }
 
   .paw2-process-title {
-    font-size: 3.4rem;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .paw2-process-description {
+    max-width: 650px;
+    margin: 22px auto 0;
+    font-size: 14px;
   }
 
   .paw2-process-timeline {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 650px;
+    margin: 0 auto;
   }
 
   .paw2-process-line {
-    top: 0;
-    bottom: 0;
-    left: 20px;
+    top: 22px;
+    bottom: 22px;
+    left: 21px;
     right: auto;
     width: 1px;
     height: auto;
   }
 
   .paw2-process-step {
-    padding: 0 0 45px 65px;
+    width: 100%;
+    padding: 0 0 48px 65px;
     text-align: left;
-  }
-
-  .paw2-process-step-top {
-    min-height: auto;
-    display: block;
   }
 
   .paw2-process-number {
     position: absolute;
-    left: 0;
+    left: -65px;
+    right: auto;
     top: 0;
-
-    width: 42px;
-    height: 42px;
-
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0;
-
     border: 1px solid var(--border);
     border-radius: 50%;
     background: var(--site-bg);
+    font-size: 10px;
+    z-index: 3;
   }
 
   .paw2-process-dot {
     display: none;
   }
 
-  .paw2-process-step.active .paw2-process-number {
-    border-color: var(--secondary);
-    background: var(--secondary);
-    color: var(--site-bg);
-  }
-
   .paw2-process-step-content {
-    max-width: 100%;
+    width: 100%;
+    max-width: none;
     margin: 0;
+    padding-top: 1px;
+    text-align: left;
+  }
+
+  .paw2-process-step-label {
+    margin-bottom: 11px;
+    text-align: left;
+  }
+
+  .paw2-process-step-content h3 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .paw2-process-step-content p {
+    max-width: 100%;
+    margin-top: 13px;
+    font-size: 13px;
+    line-height: 1.75;
+    text-align: left;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      MATERIALS
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-materials {
-    padding: 105px 40px 115px;
-    margin-top: 0;
+    padding: 105px 35px 115px;
+  }
+
+  .paw2-materials-heading {
+    max-width: 700px;
+    margin-bottom: 60px;
   }
 
   .paw2-materials-title {
@@ -3474,32 +3624,43 @@ body.dark-mode .paw2-final-cta-button-icon{
 
   .paw2-materials-layout {
     grid-template-columns: 1fr;
-    gap: 50px;
-
+    gap: 45px;
     max-width: 680px;
   }
 
   .paw2-materials-intro {
-    max-width: 620px;
+    max-width: 650px;
+  }
+
+  .paw2-material-card {
+    min-height: 185px;
+  }
+
+  .paw2-material-card-wide {
+    min-height: 170px;
   }
 
   .paw2-materials-image-wrap {
-    min-height: 500px;
-    height: 500px;
+    min-height: 470px;
+    height: 470px;
   }
 
   .paw2-materials-image {
-    min-height: 500px;
+    min-height: 470px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      LIFESTYLE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-lifestyle {
-    padding: 105px 40px 115px;
-    margin-top: 0;
+    padding: 105px 35px 115px;
+  }
+
+  .paw2-lifestyle-heading {
+    max-width: 700px;
+    margin-bottom: 60px;
   }
 
   .paw2-lifestyle-title {
@@ -3507,50 +3668,146 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-lifestyle-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    max-width: 700px;
-  }
-
-  .paw2-lifestyle-card:last-child {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 9px);
-    width: 100%;
-    justify-self: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 680px;
   }
 
   .paw2-lifestyle-image-wrap {
-    height: 300px;
+    height: 380px;
   }
 
   .paw2-lifestyle-card-content {
     min-height: 215px;
-    padding: 25px 22px 28px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      FINAL CTA
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-final-cta {
-    padding: 75px 40px 90px;
+    padding: 80px 35px 90px;
   }
 
   .paw2-final-cta-box {
     width: 100%;
-    min-height: 390px;
-
+    max-width: 720px;
+    min-height: 350px;
     padding: 55px 40px;
-    border-radius: 25px;
+    border-radius: 26px;
   }
 
   .paw2-final-cta-title {
-    font-size: 3.3rem;
+    font-size: clamp(3rem, 7vw, 4.3rem);
   }
 
   .paw2-final-cta-description {
+    max-width: 600px;
     font-size: 14px;
+  }
+
+
+  /* =========================================================
+     iPAD MINI RTL
+     ========================================================= */
+
+  body.rtl .paw2-hero-content {
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-craft-story,
+  body.rtl .paw2-gallery,
+  body.rtl .paw2-signature,
+  body.rtl .paw2-process,
+  body.rtl .paw2-materials,
+  body.rtl .paw2-lifestyle,
+  body.rtl .paw2-final-cta {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-craft-story-content,
+  body.rtl .paw2-craft-story-title,
+  body.rtl .paw2-craft-story-description {
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-number {
+    left: auto;
+    right: 26px;
+  }
+
+  body.rtl .paw2-gallery-info {
+    padding-right: 0;
+    padding-left: 50px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-arrow {
+    right: auto;
+    left: 25px;
+  }
+
+  body.rtl .paw2-signature-number {
+    right: auto;
+    left: 0;
+  }
+
+  body.rtl .paw2-signature-product {
+    text-align: right;
+  }
+
+  body.rtl .paw2-material-card-arrow {
+    right: auto;
+    left: 23px;
+  }
+
+  body.rtl .paw2-materials-image-caption {
+    left: auto;
+    right: 27px;
+  }
+
+  body.rtl .paw2-lifestyle-image-number {
+    left: auto;
+    right: 20px;
+  }
+
+  body.rtl .paw2-lifestyle-card-content {
+    text-align: right;
+  }
+
+  body.rtl .paw2-lifestyle-arrow {
+    right: auto;
+    left: 28px;
+  }
+
+  /* RTL PROCESS */
+  body.rtl .paw2-process-timeline {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-process-line {
+    left: auto;
+    right: 21px;
+  }
+
+  body.rtl .paw2-process-step {
+    padding: 0 65px 48px 0;
+    text-align: right;
+  }
+
+  body.rtl .paw2-process-number {
+    left: auto;
+    right: -65px;
+  }
+
+  body.rtl .paw2-process-step-content,
+  body.rtl .paw2-process-step-label,
+  body.rtl .paw2-process-step-content h3,
+  body.rtl .paw2-process-step-content p {
+    text-align: right;
   }
 }
 
@@ -3558,89 +3815,97 @@ body.dark-mode .paw2-final-cta-button-icon{
 /* =========================================================
    iPAD PRO 11"
    821px — 1024px
-========================================================= */
+   ========================================================= */
 
 @media screen and (min-width: 821px) and (max-width: 1024px) {
 
-  /* -------------------------------------------------------
+  /* =========================================================
      HERO
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-hero {
-    min-height: 820px;
+    min-height: 800px;
   }
 
   .paw2-hero-image {
-    background-position: center center;
+    background-position: 60% center;
   }
 
   .paw2-hero-container {
-    min-height: 820px;
-    padding: 115px 55px 115px;
+    min-height: 800px;
+    padding: 125px 50px;
   }
 
   .paw2-hero-content {
-    width: min(590px, 100%);
-    margin-left: 45px;
+    width: min(650px, 100%);
+    margin-left: 35px;
   }
 
   .paw2-hero-title {
-    font-size: 4.15rem;
+    max-width: 680px;
+    font-size: clamp(3.7rem, 7vw, 5rem);
+    line-height: 0.95;
   }
 
   .paw2-hero-description {
-    max-width: 460px;
+    max-width: 540px;
+    font-size: 15px;
+  }
+
+  .paw2-craft-features {
+    margin-top: 48px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      CRAFTSMANSHIP
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-craft-story {
     padding: 110px 50px 120px;
-    margin-top: 0;
   }
 
   .paw2-craft-container {
-    grid-template-columns: 1fr 0.95fr;
-    gap: 45px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 780px;
+    margin: 0 auto;
   }
 
   .paw2-craft-image-wrap {
-    height: 480px;
+    height: 470px;
   }
 
   .paw2-craft-story-content {
-    padding-right: 0;
+    max-width: 760px;
+    padding: 0;
   }
 
   .paw2-craft-story-title {
-    font-size: 3.25rem;
+    font-size: 3.5rem;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      GALLERY
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-gallery {
-    padding: 115px 0 120px;
-    margin-top: 0;
+    padding: 115px 0 125px;
   }
 
   .paw2-gallery-heading {
-    width: calc(100% - 100px);
-    margin-bottom: 60px;
+    max-width: 800px;
+    margin-bottom: 70px;
   }
 
   .paw2-gallery-title {
-    font-size: 3.35rem;
+    font-size: 3.5rem;
   }
 
   .paw2-gallery-item {
-    flex: 0 0 350px;
-    width: 350px;
+    flex-basis: 370px;
+    width: 370px;
   }
 
   .paw2-gallery-image-wrap {
@@ -3648,128 +3913,180 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SIGNATURE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-signature {
     padding: 115px 50px 125px;
-    margin-top: 0;
   }
 
   .paw2-signature-heading {
-    margin-bottom: 60px;
+    max-width: 800px;
+    margin-bottom: 70px;
   }
 
   .paw2-signature-title {
-    font-size: 3.35rem;
+    font-size: 3.5rem;
   }
 
   .paw2-signature-layout {
-    grid-template-columns: 1fr 0.9fr;
-    gap: 45px;
-    max-width: 920px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 780px;
   }
 
   .paw2-signature-image-wrap {
-    height: 470px;
+    height: 480px;
   }
 
   .paw2-signature-product-title {
-    font-size: 2.65rem;
+    font-size: 2.9rem;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      PROCESS
-  ------------------------------------------------------- */
+     PROPER VERTICAL ALIGNMENT
+     ========================================================= */
 
   .paw2-process {
-    padding: 115px 45px 125px;
+    padding: 110px 50px 120px;
     margin-top: 0;
   }
 
   .paw2-process-heading {
-    margin-bottom: 70px;
+    max-width: 800px;
+    margin: 0 auto 75px;
   }
 
   .paw2-process-title {
-    font-size: 3.35rem;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .paw2-process-description {
+    max-width: 700px;
+    margin: 24px auto 0;
+    font-size: 15px;
   }
 
   .paw2-process-timeline {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
   }
 
   .paw2-process-line {
-    left: 9%;
-    right: 9%;
-    top: 76px;
+    top: 23px;
+    bottom: 23px;
+    left: 22px;
+    right: auto;
+    width: 1px;
+    height: auto;
   }
 
   .paw2-process-step {
-    padding: 0 10px;
+    width: 100%;
+    padding: 0 0 55px 72px;
+    text-align: left;
+  }
+
+  .paw2-process-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .paw2-process-number {
+    position: absolute;
+    left: -72px;
+    right: auto;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--site-bg);
+    font-size: 10px;
+    z-index: 3;
+  }
+
+  .paw2-process-dot {
+    display: none;
   }
 
   .paw2-process-step-content {
-    max-width: 200px;
-    margin-top: 27px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-top: 1px;
+    text-align: left;
+  }
+
+  .paw2-process-step-label {
+    margin-bottom: 12px;
+    text-align: left;
   }
 
   .paw2-process-step-content h3 {
-    font-size: 19px;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: left;
   }
 
   .paw2-process-step-content p {
-    font-size: 12px;
-    line-height: 1.7;
+    max-width: 650px;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.75;
+    text-align: left;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      MATERIALS
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-materials {
     padding: 115px 50px 125px;
-    margin-top: 0;
+  }
+
+  .paw2-materials-heading {
+    max-width: 820px;
+    margin-bottom: 70px;
   }
 
   .paw2-materials-title {
-    font-size: 3.35rem;
+    font-size: 3.5rem;
   }
 
   .paw2-materials-layout {
-    grid-template-columns: 0.9fr 1fr;
-    gap: 45px;
-    max-width: 920px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 780px;
   }
 
-  .paw2-materials-points {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  .paw2-materials-intro {
+    max-width: 700px;
+    font-size: 15px;
   }
 
   .paw2-material-card {
-    min-height: 190px;
-    padding: 22px;
+    min-height: 195px;
   }
 
   .paw2-material-card-wide {
-    min-height: 170px;
-  }
-
-  .paw2-material-card-content h3 {
-    font-size: 19px;
-  }
-
-  .paw2-material-card-content p {
-    font-size: 12px;
+    min-height: 175px;
   }
 
   .paw2-materials-image-wrap {
     min-height: 520px;
+    height: 520px;
   }
 
   .paw2-materials-image {
@@ -3777,59 +4094,169 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      LIFESTYLE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-lifestyle {
-    padding: 115px 45px 125px;
-    margin-top: 0;
+    padding: 115px 50px 125px;
+  }
+
+  .paw2-lifestyle-heading {
+    max-width: 820px;
+    margin-bottom: 70px;
   }
 
   .paw2-lifestyle-title {
-    font-size: 3.35rem;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+  }
+
+  .paw2-lifestyle-subtitle {
+    max-width: 700px;
+    font-size: 15px;
   }
 
   .paw2-lifestyle-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
-    max-width: 930px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 780px;
   }
 
   .paw2-lifestyle-image-wrap {
-    height: 310px;
+    height: 420px;
   }
 
   .paw2-lifestyle-card-content {
     min-height: 220px;
-    padding: 25px 22px;
-  }
-
-  .paw2-lifestyle-card-content h3 {
-    font-size: 21px;
-  }
-
-  .paw2-lifestyle-card-content p {
-    font-size: 12px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      FINAL CTA
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-final-cta {
-    padding: 80px 50px 95px;
+    padding: 90px 50px 100px;
   }
 
   .paw2-final-cta-box {
-    width: min(100%, 850px);
-    min-height: 370px;
-    padding: 60px 45px;
+    width: 100%;
+    max-width: 850px;
+    min-height: 380px;
+    padding: 60px 50px;
+    border-radius: 28px;
   }
 
   .paw2-final-cta-title {
-    font-size: 3.3rem;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+  }
+
+  .paw2-final-cta-description {
+    max-width: 650px;
+    font-size: 15px;
+  }
+
+
+  /* =========================================================
+     iPAD PRO RTL
+     ========================================================= */
+
+  body.rtl .paw2-hero-content {
+    margin-left: 0;
+    margin-right: 35px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-craft-story,
+  body.rtl .paw2-gallery,
+  body.rtl .paw2-signature,
+  body.rtl .paw2-process,
+  body.rtl .paw2-materials,
+  body.rtl .paw2-lifestyle,
+  body.rtl .paw2-final-cta {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-craft-story-content,
+  body.rtl .paw2-craft-story-title,
+  body.rtl .paw2-craft-story-description {
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-number {
+    left: auto;
+    right: 26px;
+  }
+
+  body.rtl .paw2-gallery-info {
+    padding-right: 0;
+    padding-left: 55px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-arrow {
+    right: auto;
+    left: 25px;
+  }
+
+  body.rtl .paw2-signature-number {
+    right: auto;
+    left: 0;
+  }
+
+  body.rtl .paw2-signature-product {
+    text-align: right;
+  }
+
+  body.rtl .paw2-material-card-arrow {
+    right: auto;
+    left: 23px;
+  }
+
+  body.rtl .paw2-materials-image-caption {
+    left: auto;
+    right: 27px;
+  }
+
+  body.rtl .paw2-lifestyle-image-number {
+    left: auto;
+    right: 20px;
+  }
+
+  body.rtl .paw2-lifestyle-card-content {
+    text-align: right;
+  }
+
+  body.rtl .paw2-lifestyle-arrow {
+    right: auto;
+    left: 28px;
+  }
+
+  /* RTL PROCESS */
+  body.rtl .paw2-process-timeline {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-process-line {
+    left: auto;
+    right: 22px;
+  }
+
+  body.rtl .paw2-process-step {
+    padding: 0 72px 55px 0;
+    text-align: right;
+  }
+
+  body.rtl .paw2-process-number {
+    left: auto;
+    right: -72px;
+  }
+
+  body.rtl .paw2-process-step-content,
+  body.rtl .paw2-process-step-label,
+  body.rtl .paw2-process-step-content h3,
+  body.rtl .paw2-process-step-content p {
+    text-align: right;
   }
 }
 
@@ -3839,316 +4266,273 @@ body.dark-mode .paw2-final-cta-button-icon{
    EXACTLY 1024px × 600px
 
    IMPORTANT:
-   This comes AFTER the iPad Pro rules so it overrides
-   the 821px–1024px tablet styles.
-========================================================= */
+   This comes AFTER the iPad Pro query because
+   1024 × 600 also matches 821px — 1024px.
+   ========================================================= */
 
 @media screen and (width: 1024px) and (height: 600px) {
 
-  /* -------------------------------------------------------
-     HERO — COMPACT LANDSCAPE
-  ------------------------------------------------------- */
+  /* =========================================================
+     HERO
+     ========================================================= */
 
   .paw2-hero {
     min-height: 600px;
-    height: 600px;
-  }
-
-  .paw2-hero-image {
-    background-position: center center;
   }
 
   .paw2-hero-container {
     min-height: 600px;
-    height: 600px;
-
-    padding: 75px 55px 70px;
+    padding: 80px 45px 85px;
   }
 
   .paw2-hero-content {
-    width: 570px;
-    margin-left: 30px;
+    width: min(610px, 100%);
+    margin-left: 25px;
   }
 
   .paw2-hero-title {
-    font-size: 3.65rem;
-    line-height: 0.94;
+    font-size: 4rem;
+    line-height: 0.95;
   }
 
   .paw2-hero-description {
-    max-width: 430px;
     margin-top: 18px;
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .paw2-hero-actions {
-    margin-top: 22px;
-  }
-
-  .paw2-btn,
-  .paw2-story-btn {
-    min-height: 46px;
-  }
-
-  .paw2-craft-features {
-    margin-top: 30px;
-    gap: 14px;
-  }
-
-  .paw2-craft-icon {
-    width: 37px;
-    height: 37px;
-  }
-
-  .paw2-craft-text strong {
-    font-size: 10px;
-  }
-
-  .paw2-craft-text small {
-    font-size: 8px;
-  }
-
-  .paw2-hero-bottom {
-    bottom: 15px;
-  }
-
-
-  /* -------------------------------------------------------
-     CRAFTSMANSHIP
-  ------------------------------------------------------- */
-
-  .paw2-craft-story {
-    padding: 75px 45px 80px;
-    margin-top: 0;
-  }
-
-  .paw2-craft-container {
-    grid-template-columns: 1fr 0.9fr;
-    gap: 40px;
-  }
-
-  .paw2-craft-image-wrap {
-    height: 410px;
-  }
-
-  .paw2-craft-story-title {
-    font-size: 3rem;
-  }
-
-  .paw2-craft-story-description {
-    margin-top: 18px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.65;
   }
 
-  .paw2-craft-points {
-    margin-top: 28px;
+  .paw2-craft-features {
+    margin-top: 32px;
   }
 
-  .paw2-craft-point {
-    padding: 16px 0;
+  .paw2-hero-bottom {
+    bottom: 18px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
+     CRAFTSMANSHIP
+     ========================================================= */
+
+  .paw2-craft-story {
+    padding: 85px 45px 95px;
+  }
+
+  .paw2-craft-container {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .paw2-craft-image-wrap {
+    height: 350px;
+  }
+
+  .paw2-craft-story-title {
+    font-size: 3.2rem;
+  }
+
+  .paw2-craft-story-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* =========================================================
      GALLERY
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-gallery {
-    padding: 75px 0 80px;
-    margin-top: 0;
+    padding: 85px 0 95px;
   }
 
   .paw2-gallery-heading {
-    width: calc(100% - 90px);
-    margin-bottom: 42px;
+    max-width: 760px;
+    margin-bottom: 55px;
   }
 
   .paw2-gallery-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .paw2-gallery-description {
-    margin-top: 18px;
     font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .paw2-gallery-track {
-    gap: 16px;
   }
 
   .paw2-gallery-item {
-    flex: 0 0 330px;
-    width: 330px;
+    flex-basis: 350px;
+    width: 350px;
   }
 
   .paw2-gallery-image-wrap {
-    height: 320px;
+    height: 350px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      SIGNATURE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-signature {
-    padding: 75px 45px 80px;
-    margin-top: 0;
+    padding: 85px 45px 95px;
   }
 
   .paw2-signature-heading {
-    margin-bottom: 45px;
+    max-width: 760px;
+    margin-bottom: 55px;
   }
 
   .paw2-signature-title {
-    font-size: 3rem;
-  }
-
-  .paw2-signature-description {
-    margin-top: 18px;
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 3.2rem;
   }
 
   .paw2-signature-layout {
-    grid-template-columns: 1fr 0.85fr;
+    grid-template-columns: 1fr;
     gap: 40px;
-    max-width: 900px;
+    max-width: 760px;
   }
 
   .paw2-signature-image-wrap {
-    height: 410px;
+    height: 380px;
   }
 
   .paw2-signature-product-title {
-    font-size: 2.35rem;
-  }
-
-  .paw2-signature-product-description {
-    margin: 16px 0 25px;
-    font-size: 12px;
-  }
-
-  .paw2-signature-product {
-    min-height: 54px;
+    font-size: 2.6rem;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      PROCESS
-  ------------------------------------------------------- */
+     PROPER VERTICAL TIMELINE
+     ========================================================= */
 
   .paw2-process {
-    padding: 75px 40px 80px;
+    padding: 85px 45px 95px;
     margin-top: 0;
   }
 
   .paw2-process-heading {
-    margin-bottom: 45px;
+    max-width: 760px;
+    margin: 0 auto 55px;
   }
 
   .paw2-process-title {
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: 0.95;
   }
 
   .paw2-process-description {
+    max-width: 650px;
     margin-top: 18px;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .paw2-process-timeline {
-    max-width: 900px;
-  }
-
-  .paw2-process-line {
-    top: 70px;
-    left: 8%;
-    right: 8%;
-  }
-
-  .paw2-process-step {
-    padding: 0 8px;
-  }
-
-  .paw2-process-number {
-    margin-bottom: 13px;
-  }
-
-  .paw2-process-dot {
-    width: 38px;
-    height: 38px;
-  }
-
-  .paw2-process-step-content {
-    max-width: 195px;
-    margin-top: 22px;
-  }
-
-  .paw2-process-step-label {
-    margin-bottom: 9px;
-    font-size: 9px;
-  }
-
-  .paw2-process-step-content h3 {
-    font-size: 18px;
-  }
-
-  .paw2-process-step-content p {
-    margin-top: 10px;
-    font-size: 11px;
-    line-height: 1.6;
-  }
-
-
-  /* -------------------------------------------------------
-     MATERIALS
-  ------------------------------------------------------- */
-
-  .paw2-materials {
-    padding: 75px 45px 80px;
-    margin-top: 0;
-  }
-
-  .paw2-materials-heading {
-    margin-bottom: 45px;
-  }
-
-  .paw2-materials-title {
-    font-size: 3rem;
-  }
-
-  .paw2-materials-subtitle {
-    margin-top: 18px;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .paw2-materials-layout {
-    grid-template-columns: 0.9fr 1fr;
-    gap: 40px;
-    max-width: 900px;
-  }
-
-  .paw2-materials-intro {
-    margin-bottom: 25px;
     font-size: 13px;
     line-height: 1.65;
   }
 
-  .paw2-materials-points {
-    gap: 10px;
+  .paw2-process-timeline {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .paw2-process-line {
+    top: 22px;
+    bottom: 22px;
+    left: 22px;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .paw2-process-step {
+    width: 100%;
+    padding: 0 0 42px 72px;
+    text-align: left;
+  }
+
+  .paw2-process-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .paw2-process-number {
+    position: absolute;
+    left: -72px;
+    right: auto;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--site-bg);
+    font-size: 10px;
+    z-index: 3;
+  }
+
+  .paw2-process-dot {
+    display: none;
+  }
+
+  .paw2-process-step-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+  }
+
+  .paw2-process-step-label {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .paw2-process-step-content h3 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .paw2-process-step-content p {
+    max-width: 650px;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+
+  /* =========================================================
+     MATERIALS
+     ========================================================= */
+
+  .paw2-materials {
+    padding: 85px 45px 95px;
+  }
+
+  .paw2-materials-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+  }
+
+  .paw2-materials-title {
+    font-size: 3.2rem;
+  }
+
+  .paw2-materials-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    max-width: 760px;
   }
 
   .paw2-material-card {
-    min-height: 165px;
-    padding: 20px;
+    min-height: 175px;
   }
 
   .paw2-material-card-wide {
-    min-height: 150px;
+    min-height: 160px;
   }
 
   .paw2-material-card-content {
@@ -4156,97 +4540,224 @@ body.dark-mode .paw2-final-cta-button-icon{
   }
 
   .paw2-material-card-content h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .paw2-material-card-content p {
-    margin-top: 9px;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.6;
   }
 
   .paw2-materials-image-wrap {
-    min-height: 470px;
+    min-height: 400px;
+    height: 400px;
   }
 
   .paw2-materials-image {
-    min-height: 470px;
+    min-height: 400px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      LIFESTYLE
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-lifestyle {
-    padding: 75px 40px 80px;
-    margin-top: 0;
+    padding: 85px 45px 95px;
   }
 
   .paw2-lifestyle-heading {
-    margin-bottom: 45px;
+    margin-bottom: 55px;
   }
 
   .paw2-lifestyle-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .paw2-lifestyle-subtitle {
     margin-top: 18px;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   .paw2-lifestyle-grid {
-    gap: 15px;
-    max-width: 900px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 760px;
   }
 
   .paw2-lifestyle-image-wrap {
-    height: 270px;
+    height: 350px;
   }
 
   .paw2-lifestyle-card-content {
-    min-height: 195px;
-    padding: 22px 20px;
+    min-height: 205px;
+    padding: 25px 25px 28px;
   }
 
   .paw2-lifestyle-card-content h3 {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .paw2-lifestyle-card-content p {
-    margin-top: 11px;
-    font-size: 11px;
-    line-height: 1.6;
+    font-size: 12px;
   }
 
 
-  /* -------------------------------------------------------
+  /* =========================================================
      FINAL CTA
-  ------------------------------------------------------- */
+     ========================================================= */
 
   .paw2-final-cta {
-    padding: 60px 45px 65px;
+    padding: 70px 45px 80px;
   }
 
   .paw2-final-cta-box {
-    min-height: 300px;
-    padding: 45px 40px;
+    max-width: 760px;
+    min-height: 330px;
+    padding: 50px 40px;
     border-radius: 25px;
   }
 
   .paw2-final-cta-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .paw2-final-cta-description {
     margin-top: 18px;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
-  .paw2-final-cta-button {
-    margin-top: 23px;
+
+  /* =========================================================
+     NEST HUB RTL
+     ========================================================= */
+
+  body.rtl .paw2-hero-content {
+    margin-left: 0;
+    margin-right: 25px;
+    text-align: right;
   }
+
+  body.rtl .paw2-craft-story,
+  body.rtl .paw2-gallery,
+  body.rtl .paw2-signature,
+  body.rtl .paw2-process,
+  body.rtl .paw2-materials,
+  body.rtl .paw2-lifestyle,
+  body.rtl .paw2-final-cta {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-craft-story-content,
+  body.rtl .paw2-craft-story-title,
+  body.rtl .paw2-craft-story-description {
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-number {
+    left: auto;
+    right: 24px;
+  }
+
+  body.rtl .paw2-gallery-info {
+    padding-right: 0;
+    padding-left: 50px;
+    text-align: right;
+  }
+
+  body.rtl .paw2-gallery-arrow {
+    right: auto;
+    left: 22px;
+  }
+
+  body.rtl .paw2-signature-number {
+    right: auto;
+    left: 0;
+  }
+
+  body.rtl .paw2-signature-product {
+    text-align: right;
+  }
+
+  body.rtl .paw2-material-card-arrow {
+    right: auto;
+    left: 23px;
+  }
+
+  body.rtl .paw2-materials-image-caption {
+    left: auto;
+    right: 27px;
+  }
+
+  body.rtl .paw2-lifestyle-image-number {
+    left: auto;
+    right: 20px;
+  }
+
+  body.rtl .paw2-lifestyle-card-content {
+    text-align: right;
+  }
+
+  body.rtl .paw2-lifestyle-arrow {
+    right: auto;
+    left: 28px;
+  }
+
+  /* RTL PROCESS */
+  body.rtl .paw2-process-timeline {
+    direction: rtl;
+  }
+
+  body.rtl .paw2-process-line {
+    left: auto;
+    right: 22px;
+  }
+
+  body.rtl .paw2-process-step {
+    padding: 0 72px 42px 0;
+    text-align: right;
+  }
+
+  body.rtl .paw2-process-number {
+    left: auto;
+    right: -72px;
+  }
+
+  body.rtl .paw2-process-step-content,
+  body.rtl .paw2-process-step-label,
+  body.rtl .paw2-process-step-content h3,
+  body.rtl .paw2-process-step-content p {
+    text-align: right;
+  }
+}
+
+
+/* =========================================================
+   FINAL SAFETY
+   PREVENT MOBILE HORIZONTAL OVERFLOW
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+  .paw2-hero *,
+  .paw2-craft-story *,
+  .paw2-gallery *,
+  .paw2-signature *,
+  .paw2-process *,
+  .paw2-materials *,
+  .paw2-lifestyle *,
+  .paw2-final-cta {
+    box-sizing: border-box;
+  }
+
+  .paw2-gallery-track {
+    max-width: none;
+  }
+
+  .paw2-gallery-item {
+    max-width: none;
+  }
+
 }
