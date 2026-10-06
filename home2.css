@@ -240,12 +240,11 @@ body.dark-mode .paw2-btn-primary {
 
   padding: 0 18px;
 
-  border: 1px solid var(--border);
+  border: 2px solid var(--secondary);
 
   border-radius: 9px;
 
-  background: var(--surface-hover);
-
+  background: white;
   color: var(--text);
 
   cursor: pointer;
