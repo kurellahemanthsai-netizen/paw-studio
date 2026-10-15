@@ -139,8 +139,8 @@ function renderPawProductDetails() {
 
   document.title = `${product.name} | PawStudio`;
 
-  document.getElementById("detailBreadcrumbName").textContent =
-    product.name;
+  // document.getElementById("detailBreadcrumbName").textContent =
+  //   product.name;
 
   document.getElementById("detailCategory").textContent =
     product.categoryLabel.toUpperCase();
