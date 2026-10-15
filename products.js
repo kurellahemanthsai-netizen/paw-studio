@@ -1,3 +1,4 @@
+
 "use strict";
 
 /* =========================================================
@@ -16,9 +17,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/cozy.jpeg",
     description:
-      "A soft and cozy resting space designed for smaller companions.",
+      "A soft and cozy resting space designed for smaller companions."
   },
-
   {
     id: 2,
     name: "Cloud Rest Bed",
@@ -30,9 +30,8 @@ const pawProducts = [
     rating: 4.9,
     image: "images/cloud-rest.jpeg",
     description:
-      "A supportive everyday bed made for comfortable medium-sized pets.",
+      "A supportive everyday bed made for comfortable medium-sized pets."
   },
-
   {
     id: 3,
     name: "Grand Comfort Bed",
@@ -44,9 +43,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/grand.jpeg",
     description:
-      "A spacious and supportive resting space for larger companions.",
+      "A spacious and supportive resting space for larger companions."
   },
-
   {
     id: 4,
     name: "Pet Lounge",
@@ -58,9 +56,8 @@ const pawProducts = [
     rating: 4.9,
     image: "images/lounge.jpeg",
     description:
-      "A relaxed lounging space designed to fit naturally into your home.",
+      "A relaxed lounging space designed to fit naturally into your home."
   },
-
   {
     id: 5,
     name: "Quiet Cat House",
@@ -72,9 +69,8 @@ const pawProducts = [
     rating: 4.7,
     image: "images/quiet.jpeg",
     description:
-      "A cozy private retreat for cats who love calm and quiet spaces.",
+      "A cozy private retreat for cats who love calm and quiet spaces."
   },
-
   {
     id: 6,
     name: "Window Perch",
@@ -86,9 +82,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/window.jpeg",
     description:
-      "A comfortable elevated spot for relaxing and watching the world.",
+      "A comfortable elevated spot for relaxing and watching the world."
   },
-
   {
     id: 7,
     name: "Feeding Bowl Stand",
@@ -100,9 +95,8 @@ const pawProducts = [
     rating: 4.7,
     image: "images/bowl.jpeg",
     description:
-      "A simple elevated feeding solution designed for everyday routines.",
+      "A simple elevated feeding solution designed for everyday routines."
   },
-
   {
     id: 8,
     name: "Pet Toy Storage",
@@ -114,9 +108,8 @@ const pawProducts = [
     rating: 4.6,
     image: "images/toy-storage.jpeg",
     description:
-      "A practical way to keep their favorite toys neatly organized.",
+      "A practical way to keep their favorite toys neatly organized."
   },
-
   {
     id: 9,
     name: "Everyday Pet Mat",
@@ -128,8 +121,8 @@ const pawProducts = [
     rating: 4.8,
     image: "images/mat.jpeg",
     description:
-      "A versatile everyday mat for resting, feeding, and relaxing.",
-  },
+      "A versatile everyday mat for resting, feeding, and relaxing."
+  }
 ];
 
 
@@ -170,22 +163,20 @@ function formatPawPrice(price) {
 
 
 /* =========================================================
+   CREATE PRODUCT DETAIL URL
+========================================================= */
+
+function getPawProductDetailUrl(product) {
+  return `product-d.html?product=${encodeURIComponent(product.name)}`;
+}
+
+
+/* =========================================================
    CREATE PRODUCT CARD
 ========================================================= */
 
 function createProductCard(product) {
-
-  /*
-    IMPORTANT:
-    The View Product button now redirects to contact.html
-    and also sends the selected product name through the URL.
-
-    Example:
-    contact.html?product=Cozy%20Haven%20Bed
-  */
-
-  const contactUrl =
-    `contact.html?product=${encodeURIComponent(product.name)}`;
+  const detailUrl = getPawProductDetailUrl(product);
 
   return `
     <article class="paw-product-card">
@@ -205,7 +196,6 @@ function createProductCard(product) {
 
       </div>
 
-
       <div class="paw-product-content">
 
         <div class="paw-product-meta">
@@ -221,16 +211,13 @@ function createProductCard(product) {
 
         </div>
 
-
         <h3 class="paw-product-name">
           ${product.name}
         </h3>
 
-
         <p class="paw-product-description">
           ${product.description}
         </p>
-
 
         <div class="paw-product-bottom">
 
@@ -240,17 +227,13 @@ function createProductCard(product) {
 
         </div>
 
-
-        <!-- =========================================
-             VIEW PRODUCT
-             REDIRECTS TO CONTACT PAGE
-        ========================================== -->
+        <!-- VIEW PRODUCT: OPENS PRODUCT DETAIL PAGE -->
 
         <a
-          href="${contactUrl}"
+          href="${detailUrl}"
           class="paw-product-link"
           data-product-id="${product.id}"
-          aria-label="Contact PawStudio about ${product.name}"
+          aria-label="View details for ${product.name}"
         >
           View Product
           <i data-lucide="arrow-up-right"></i>
@@ -268,7 +251,6 @@ function createProductCard(product) {
 ========================================================= */
 
 function renderPawProducts() {
-
   const grid = document.getElementById("paw-products-grid");
   const emptyState = document.getElementById("paw-products-empty");
   const count = document.getElementById("paw-products-count");
@@ -277,17 +259,11 @@ function renderPawProducts() {
 
   const filteredProducts = getFilteredProducts();
 
-  /*
-    Clear existing products
-  */
   grid.innerHTML = "";
 
+  /* EMPTY STATE */
 
-  /*
-    Empty state
-  */
   if (filteredProducts.length === 0) {
-
     grid.hidden = true;
 
     if (emptyState) {
@@ -299,40 +275,31 @@ function renderPawProducts() {
     }
 
     refreshPawIcons();
-
     return;
   }
 
+  /* SHOW PRODUCT GRID */
 
-  /*
-    Show product grid
-  */
   grid.hidden = false;
 
   if (emptyState) {
     emptyState.hidden = true;
   }
 
+  /* GENERATE PRODUCT CARDS */
 
-  /*
-    Render cards
-  */
   grid.innerHTML = filteredProducts
     .map(createProductCard)
     .join("");
 
+  /* UPDATE PRODUCT COUNT */
 
-  /*
-    Update count
-  */
   if (count) {
     count.textContent = filteredProducts.length;
   }
 
+  /* REFRESH DYNAMIC ICONS */
 
-  /*
-    Refresh Lucide icons
-  */
   refreshPawIcons();
 }
 
@@ -342,36 +309,21 @@ function renderPawProducts() {
 ========================================================= */
 
 function initializeCategoryFilters() {
-
   const categoryButtons = document.querySelectorAll(
     ".paw-products-filter-button"
   );
 
   categoryButtons.forEach((button) => {
-
     button.addEventListener("click", () => {
-
       activeCategory =
         button.getAttribute("data-category") || "all";
 
-
-      /*
-        Remove active state
-      */
       categoryButtons.forEach((item) => {
         item.classList.remove("is-active");
       });
 
-
-      /*
-        Add active state
-      */
       button.classList.add("is-active");
 
-
-      /*
-        Render filtered products
-      */
       renderPawProducts();
     });
   });
@@ -383,36 +335,21 @@ function initializeCategoryFilters() {
 ========================================================= */
 
 function initializeSizeFilters() {
-
   const sizeButtons = document.querySelectorAll(
     ".paw-products-size-button"
   );
 
   sizeButtons.forEach((button) => {
-
     button.addEventListener("click", () => {
-
       activeSize =
         button.getAttribute("data-size") || "all";
 
-
-      /*
-        Remove active state
-      */
       sizeButtons.forEach((item) => {
         item.classList.remove("is-active");
       });
 
-
-      /*
-        Add active state
-      */
       button.classList.add("is-active");
 
-
-      /*
-        Render filtered products
-      */
       renderPawProducts();
     });
   });
@@ -424,46 +361,30 @@ function initializeSizeFilters() {
 ========================================================= */
 
 function resetPawProductFilters() {
-
   activeCategory = "all";
   activeSize = "all";
 
-
-  /*
-    Reset category buttons
-  */
+  /* RESET CATEGORY BUTTONS */
 
   document
     .querySelectorAll(".paw-products-filter-button")
     .forEach((button) => {
-
       button.classList.toggle(
         "is-active",
         button.getAttribute("data-category") === "all"
       );
-
     });
 
-
-  /*
-    Reset size buttons
-  */
+  /* RESET SIZE BUTTONS */
 
   document
     .querySelectorAll(".paw-products-size-button")
     .forEach((button) => {
-
       button.classList.toggle(
         "is-active",
         button.getAttribute("data-size") === "all"
       );
-
     });
-
-
-  /*
-    Render all products
-  */
 
   renderPawProducts();
 }
@@ -474,31 +395,24 @@ function resetPawProductFilters() {
 ========================================================= */
 
 function initializeProductResetButtons() {
-
   const clearButton =
     document.getElementById("paw-products-clear");
 
   const resetButton =
     document.getElementById("paw-products-reset");
 
-
   if (clearButton) {
-
     clearButton.addEventListener(
       "click",
       resetPawProductFilters
     );
-
   }
 
-
   if (resetButton) {
-
     resetButton.addEventListener(
       "click",
       resetPawProductFilters
     );
-
   }
 }
 
@@ -508,13 +422,9 @@ function initializeProductResetButtons() {
 ========================================================= */
 
 function refreshPawIcons() {
-
   if (typeof lucide !== "undefined") {
-
     lucide.createIcons();
-
   }
-
 }
 
 
@@ -523,29 +433,10 @@ function refreshPawIcons() {
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  /*
-    Initialize filters
-  */
-
   initializeCategoryFilters();
-
   initializeSizeFilters();
-
   initializeProductResetButtons();
 
-
-  /*
-    Render products
-  */
-
   renderPawProducts();
-
-
-  /*
-    Initialize icons
-  */
-
   refreshPawIcons();
-
 });

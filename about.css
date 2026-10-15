@@ -1282,6 +1282,9 @@ body.dark-mode .paw-about-hero-button-icon{
 
   color: #292625;
 }
+body.dark-mode .paw2-cta-title{
+  color: white;
+}
 
 .paw2-cta-title span {
   display: block;

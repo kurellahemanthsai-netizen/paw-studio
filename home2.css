@@ -1,19 +1,23 @@
+
 /* =========================================================
    PAWSTUDIO HOME 2
-   PREMIUM HERO
+   PREMIUM HERO — CENTERED CONTENT
 ========================================================= */
 
 .paw2-hero {
   position: relative;
   min-height: 90vh;
+margin-top: 78px;  
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 
   background: var(--site-bg);
   color: var(--text);
+  isolation: isolate;
 }
 
 /* =========================================================
@@ -23,9 +27,7 @@
 .paw2-hero-background {
   position: absolute;
   inset: 0;
-
   z-index: 0;
-
   overflow: hidden;
 }
 
@@ -38,62 +40,84 @@
 
   background-image: url("images/hero-2.png");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 
   transform: scale(1.08);
 
-  animation: paw2-image-enter 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation: paw2-image-enter
+    2.4s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
 
 /* =========================================================
-   IMAGE OVERLAY
+   IMAGE OVERLAY — LIGHT MODE
 ========================================================= */
 
 .paw2-hero-overlay {
   position: absolute;
   inset: 0;
-
-  /*
-    Uses the existing site background variable rather
-    than introducing another color variable.
-  */
+  z-index: 1;
 
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, var(--site-bg) 92%, transparent) 0%,
-
-    color-mix(in srgb, var(--site-bg) 76%, transparent) 23%,
-
-    color-mix(in srgb, var(--site-bg) 43%, transparent) 45%,
-
-    transparent 75%
+    color-mix(in srgb, var(--site-bg) 94%, transparent) 0%,
+    color-mix(in srgb, var(--site-bg) 88%, transparent) 30%,
+    color-mix(in srgb, var(--site-bg) 72%, transparent) 55%,
+    color-mix(in srgb, var(--site-bg) 38%, transparent) 78%,
+    color-mix(in srgb, var(--site-bg) 18%, transparent) 100%
   );
-
-  z-index: 1;
 }
 
 /* =========================================================
-   HERO CONTENT
+   IMAGE OVERLAY — DARK MODE
+========================================================= */
+
+body.dark-mode .paw2-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--site-bg) 96%, transparent) 0%,
+    color-mix(in srgb, var(--site-bg) 91%, transparent) 30%,
+    color-mix(in srgb, var(--site-bg) 78%, transparent) 55%,
+    color-mix(in srgb, var(--site-bg) 48%, transparent) 78%,
+    color-mix(in srgb, var(--site-bg) 25%, transparent) 100%
+  );
+}
+
+/* =========================================================
+   HERO CONTAINER
 ========================================================= */
 
 .paw2-hero-container {
   position: relative;
   z-index: 3;
 
-  min-height: 100vh;
-  min-height: 100svh;
+  width: 100%;
+  max-width: 1440px;
+
+  min-height: 90vh;
+  min-height: 90svh;
+
+  margin: 0 auto;
+  padding: 120px 55px 100px;
 
   display: flex;
   align-items: center;
-
-  padding-top: 100px;
-  padding-bottom: 125px;
+  justify-content: center;
 }
 
+/* =========================================================
+   HERO CONTENT — CENTERED
+========================================================= */
+
 .paw2-hero-content {
-  width: min(630px, 100%);
-  margin-left: 100px;
+  width: min(760px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 /* =========================================================
@@ -105,7 +129,8 @@
 
   opacity: 0;
 
-  animation: paw2-fade-up 0.8s ease 0.2s forwards;
+  animation: paw2-fade-up
+    0.8s ease 0.2s forwards;
 }
 
 /* =========================================================
@@ -113,27 +138,30 @@
 ========================================================= */
 
 .paw2-hero-title {
-  max-width: 650px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
 
   font-family: "DM Sans", sans-serif;
-
   font-size: 4.5rem;
   font-weight: 500;
-
-  line-height: 0.95;
-
+  line-height: 1.08;
   letter-spacing: -0.04em;
 
   color: var(--text);
 
+  text-align: center;
+  text-wrap: balance;
+
   opacity: 0;
 
-  animation: paw2-title-reveal 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s forwards;
+  animation: paw2-title-reveal
+    1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s forwards;
 }
 
 .paw2-hero-title span {
   display: block;
-
+  margin-top: 5px;
   color: var(--primary);
 }
 
@@ -142,19 +170,20 @@
 ========================================================= */
 
 .paw2-hero-description {
-  max-width: 465px;
+  width: 100%;
+  max-width: 570px;
 
-  margin-top: 27px;
+  margin: 25px auto 0;
 
-  color: var(--muted);
+  color: var(--text);
 
   font-size: 16px;
-
-  line-height: 1.75;
+  line-height: 1.8;
 
   opacity: 0;
 
-  animation: paw2-fade-up 0.8s ease 0.6s forwards;
+  animation: paw2-fade-up
+    0.8s ease 0.6s forwards;
 }
 
 /* =========================================================
@@ -164,14 +193,17 @@
 .paw2-hero-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  gap: 14px;
+  gap: 16px;
 
   margin-top: 32px;
 
   opacity: 0;
 
-  animation: paw2-fade-up 0.8s ease 0.75s forwards;
+  animation: paw2-fade-up
+    0.8s ease 0.75s forwards;
 }
 
 /* =========================================================
@@ -186,9 +218,9 @@
   justify-content: center;
 
   gap: 11px;
-
   padding: 0 23px;
 
+  border: 1px solid transparent;
   border-radius: 9px;
 
   font-size: 13px;
@@ -196,7 +228,8 @@
 
   transition:
     transform var(--transition),
-    background var(--transition);
+    background var(--transition),
+    color var(--transition);
 }
 
 .paw2-btn svg {
@@ -218,12 +251,10 @@
   background: var(--primary);
   color: var(--surface);
 }
-body.dark-mode .paw2-btn-primary {
-  color: white;
-}
 
 .paw2-btn-primary:hover {
   background: var(--secondary);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -235,16 +266,20 @@ body.dark-mode .paw2-btn-primary {
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
   gap: 11px;
-
   padding: 0 18px;
 
-  border: 2px solid var(--secondary);
-
+  border: 1.5px solid var(--secondary);
   border-radius: 9px;
 
-  background: white;
+  background: color-mix(
+    in srgb,
+    var(--site-bg) 86%,
+    transparent
+  );
+
   color: var(--text);
 
   cursor: pointer;
@@ -253,16 +288,19 @@ body.dark-mode .paw2-btn-primary {
   font-weight: 600;
 
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   transition:
     transform var(--transition),
     background var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    color var(--transition);
 }
 
 .paw2-story-btn:hover {
   transform: translateY(-3px);
 
+  background: var(--surface);
   border-color: var(--primary);
   color: var(--primary);
 }
